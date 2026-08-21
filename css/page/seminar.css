@@ -1,0 +1,128 @@
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @keyframes slide-in {
+            from {
+                transform: translateY(-10px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animate-in {
+            animation: slide-in 0.3s ease-out forwards;
+        }
+
+        /* スムーズスクロール */
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+
+        /* FV用オーバーレイ */
+        .fv-overlay {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+        }
+
+
+        .seminar_carousel h2.basic__title {
+            margin: 20px 0px;
+        }
+
+        .seminar_carousel button {
+            outline: none;
+            border: 1px solid #d1d1d1;
+            padding: 1rem 1.125rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .seminar {
+            .tw-p-6 {
+                padding: 3rem !important;
+            }
+
+            .carousel_card {
+                font-size: 16px;
+            }
+
+            .carousel_card .tw-p-5 {
+                padding: 2rem !important;
+            }
+
+            .cal_icon {
+                width: 30px;
+                height: 30px;
+            }
+
+            .banner {
+                padding: 40px 0px;
+            }
+
+            .icons {
+                padding: 10px;
+                height: 2.75rem;
+                box-sizing: content-box;
+            }
+
+            .zanseki {
+                max-width: 600px;
+                padding: 10px;
+                margin: 20px auto 0px auto;
+            }
+
+            .seminar_box {
+                border: 1px solid #eaeaea;
+            }
+
+            .seminar_box .tw-h-64 {
+                height: 25rem;
+            }
+
+            .seminar_box .arrow_u {
+                padding: 1.2rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .tab-buttons button {
+                border: 1px solid #eaeaea;
+                padding: 1.25rem 1.5rem;
+                font-size: 14px;
+            }
+
+            .seminar_inner {
+                width: 1200px;
+                max-width: 90%;
+                margin: 40px auto;
+            }
+
+            .tw-font-black {
+                font-weight: 600;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .zanseki {
+                max-width: 90% !important;
+                margin: 20px 20px 0px 20px;
+            }
+            .seminar .seminar_carousel button {
+                padding: 0.5rem 0.65rem;
+            }
+        }
+
+        .ex-about {
+            display: none;
+        }

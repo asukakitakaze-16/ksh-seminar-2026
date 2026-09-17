@@ -1,0 +1,1046 @@
+@charset "utf-8";
+/* =============================================================
+   seminar_timetable.css
+   セミナータイムテーブル専用スタイル（seminar_hozon.php 用）
+   - すべて .stt 配下にスコープしているため、他ページ・他パーツに影響しません
+   - html の font-size が 62.5% のため、単位は px で統一しています
+   ============================================================= */
+
+.stt {
+  /* ---- カラーパレット（現行 seminar ページの色を踏襲） ---- */
+  --stt-orange: #EA7022;
+  --stt-orange-dark: #c25e1b;
+  --stt-orange-soft: #FFF3E9;
+  --stt-blue: #174A9A;
+  --stt-blue-soft: #EDF3FC;
+  --stt-gold: #E5A33B;
+  --stt-gold-soft: #FDF4E4;
+
+  --stt-text: #202027;
+  --stt-muted: #6b6570;
+  --stt-border: #ececec;
+  --stt-border-strong: #e3ddd6;
+
+  --stt-gradient: linear-gradient(100deg, #EA7022 0%, #dd7b1f 50%, #cf9026 100%);
+  --stt-gradient-soft: linear-gradient(135deg, rgba(234, 112, 34, 0.10), rgba(229, 163, 59, 0.12));
+
+  --stt-shadow-card: 0 10px 26px rgba(120, 90, 60, 0.08);
+  --stt-shadow-soft: 0 16px 46px rgba(150, 100, 50, 0.10);
+
+  --stt-radius-lg: 20px;
+  --stt-radius-md: 14px;
+  --stt-radius-pill: 999px;
+
+  /* stage-head の sticky 停止位置（固定ヘッダーの高さに合わせて調整可） */
+  --stt-sticky-top: 0px;
+
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 0 54px;
+  color: var(--stt-text);
+  letter-spacing: 0.02em;
+  font-family: "Noto Sans JP", "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.stt,
+.stt *,
+.stt *::before,
+.stt *::after {
+  box-sizing: border-box;
+}
+
+.stt button {
+  font: inherit;
+}
+
+/* =========================================
+   見出し
+========================================= */
+.stt-head {
+  display: block;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.stt-title {
+  margin: 0;
+  padding: 40px 0 16px;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+.stt-title .stt-accent {
+  color: var(--stt-orange);
+}
+
+.stt-title-icon {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+  vertical-align: -5px;
+  stroke: var(--stt-orange);
+  stroke-width: 2.4;
+  fill: none;
+}
+
+.stt-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 0 0 8px;
+}
+
+.stt-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border: 1.5px solid rgba(234, 112, 34, 0.26);
+  border-radius: var(--stt-radius-pill);
+  background: linear-gradient(100deg, rgba(234, 112, 34, 0.10) 0%, rgba(229, 163, 59, 0.14) 100%);
+  color: var(--stt-orange-dark);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(234, 112, 34, 0.07);
+}
+
+.stt-badge svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  stroke: var(--stt-orange);
+  stroke-width: 2.5;
+  fill: none;
+}
+
+/* =========================================
+   日付タブ
+========================================= */
+.stt-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--stt-border);
+  border-radius: 14px 14px 0 0;
+  background: rgba(255, 255, 255, 0.78);
+  overflow: visible;
+  position: relative;
+  z-index: 2;
+  box-shadow: var(--stt-shadow-soft);
+}
+
+.stt-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 68px;
+  border: 0;
+  border-right: 1px solid var(--stt-border);
+  background: #fff;
+  color: #3d3941;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.stt-tab:first-child {
+  border-radius: 14px 0 0 0;
+}
+
+.stt-tab:last-child {
+  border-right: 0;
+  border-radius: 0 14px 0 0;
+}
+
+.stt-tab.is-active {
+  color: #fff;
+  background: var(--stt-gradient);
+}
+
+/* 「すべてのセミナー」表示中：両日とも表示対象であることを示す控えめな状態 */
+.stt-tab.is-included {
+  background: var(--stt-orange-soft);
+  color: var(--stt-orange-dark);
+}
+
+.stt-tab.is-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #d97d21;
+  z-index: 3;
+}
+
+.stt-tab svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* =========================================
+   ツールバー（カテゴリー絞り込み）
+========================================= */
+.stt-toolbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: start;
+  padding: 32px 4px 20px;
+}
+
+.stt-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.stt-chip,
+.stt-stage-filter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 24px;
+  border: 1px solid var(--stt-border-strong);
+  border-radius: var(--stt-radius-pill);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--stt-orange-dark);
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 6px 16px rgba(92, 70, 50, 0.05);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  white-space: nowrap;
+}
+
+.stt-chip:hover,
+.stt-stage-filter:hover {
+  transform: translateY(-1px);
+}
+
+.stt-chip.is-active,
+.stt-stage-filter.is-active {
+  border-color: transparent;
+  color: #fff;
+  background: var(--stt-gradient);
+  box-shadow: 0 10px 22px rgba(234, 112, 34, 0.22);
+}
+
+.stt-toolbar-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.stt-result-count {
+  margin: 0;
+  color: #3b3640;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================================
+   開催日の切り替え
+========================================= */
+.stt-stage-nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 2px 0 24px;
+}
+
+/* 共通 js が全 nav に付与する is-fixed を無効化 */
+.stt-stage-nav.is-fixed,
+.stt-tabs.is-fixed {
+  position: static !important;
+  width: auto !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+.stt-stage-filter {
+  min-height: 58px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  justify-content: flex-start;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.stt-stage-filter-main {
+  display: grid;
+  gap: 3px;
+}
+
+.stt-stage-filter-title {
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+.stt-stage-filter-count {
+  font-size: 11px;
+  line-height: 1;
+  opacity: 0.8;
+  font-weight: 800;
+}
+
+.stt-stage-filter-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background: var(--stt-gradient-soft);
+  color: var(--stt-orange);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.stt-stage-filter.is-active .stt-stage-filter-icon {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+/* =========================================
+   開催日別ボード
+========================================= */
+.stt-board {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.stt-column {
+  position: relative;
+  min-width: 0;
+  border: 1px solid rgba(230, 224, 216, 0.9);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: var(--stt-shadow-card);
+  overflow: hidden;
+}
+
+.stt-column.is-focused {
+  grid-column: 1 / -1;
+}
+
+.stt-stage-head {
+  position: sticky;
+  top: var(--stt-sticky-top);
+  z-index: 1;
+  display: block;
+  padding: 18px 18px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 250, 245, 0.9));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.stt-stage-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  border-radius: var(--stt-radius-pill);
+  background: var(--stt-orange-soft);
+  color: var(--stt-orange);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.stt-stage-title {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.48;
+  font-weight: 900;
+}
+
+.stt-stage-desc {
+  margin: 8px 0 0;
+  color: var(--stt-muted);
+  font-size: 12px;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+.stt-stage-count {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  height: 30px;
+  border-radius: var(--stt-radius-pill);
+  background: #fff;
+  color: var(--stt-orange);
+  font-size: 12px;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(90, 70, 50, 0.07);
+}
+
+/* ---- 開催日ごとのヘッダー配色（.stt-stage-a = DAY1 / -b = DAY2） ---- */
+.stt-column.stt-stage-a .stt-stage-head {
+  background: linear-gradient(135deg, #FFF4EA 0%, #FFE7D3 100%);
+}
+.stt-column.stt-stage-a .stt-stage-title { color: #a1470f; }
+.stt-column.stt-stage-a .stt-stage-desc { color: #7c5942; }
+.stt-column.stt-stage-a .stt-stage-kicker {
+  background: rgba(234, 112, 34, 0.14);
+  color: #c25e1b;
+}
+.stt-column.stt-stage-a .stt-stage-count {
+  color: #c25e1b;
+  border: 1px solid rgba(234, 112, 34, 0.2);
+}
+
+.stt-column.stt-stage-b .stt-stage-head {
+  background: linear-gradient(135deg, #EFF5FD 0%, #DEEAFA 100%);
+}
+.stt-column.stt-stage-b .stt-stage-title { color: #123a7a; }
+.stt-column.stt-stage-b .stt-stage-desc { color: #45566f; }
+.stt-column.stt-stage-b .stt-stage-kicker {
+  background: rgba(23, 74, 154, 0.12);
+  color: #174A9A;
+}
+.stt-column.stt-stage-b .stt-stage-count {
+  color: #174A9A;
+  border: 1px solid rgba(23, 74, 154, 0.2);
+}
+
+/* =========================================
+   セミナーカード
+========================================= */
+.stt-list {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.stt-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 76px 64px 1fr;
+  gap: 13px;
+  min-height: 124px;
+  padding: 14px;
+  border: 1px solid rgba(230, 224, 216, 0.86);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 22px rgba(120, 90, 60, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* 横長バナー画像用（写真枠ではなくタイトル上に表示） */
+.stt-card.has-banner,
+/* 講師写真・ロゴがない講演（写真枠を出さない） */
+.stt-card.no-photo {
+  grid-template-columns: 76px 1fr;
+}
+
+/* 内容調整中の講演 */
+.stt-card.is-pending {
+  border-style: dashed;
+  border-color: #e6ddd2;
+  background: rgba(252, 250, 248, 0.94);
+  min-height: 0;
+  box-shadow: none;
+}
+
+.stt-card.is-pending:hover {
+  transform: none;
+  border-color: #ddd0c1;
+  box-shadow: 0 8px 22px rgba(120, 90, 60, 0.06);
+}
+
+.stt-card.is-pending .stt-card-title {
+  color: #857c72;
+}
+
+/* 特別企画 */
+.stt-card.is-special {
+  border-color: rgba(229, 163, 59, 0.55);
+  background: linear-gradient(135deg, #FFFDF8 0%, #FDF5E6 100%);
+}
+
+.stt-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(234, 112, 34, 0.45);
+  box-shadow: 0 16px 34px rgba(150, 90, 40, 0.13);
+}
+
+.stt-banner-img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f4efe9;
+}
+
+.stt-banner-img img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.stt-time-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 92px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #FFF1E4 0%, #FFFBF7 100%);
+  color: var(--stt-orange);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.stt-time-badge .stt-marker {
+  margin: 3px 0;
+  font-size: 9px;
+  color: var(--stt-gold);
+}
+
+.stt-time-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  margin-bottom: 5px;
+  padding: 2px 7px;
+  border-radius: var(--stt-radius-pill);
+  background: rgba(234, 112, 34, 0.14);
+  color: var(--stt-orange-dark);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.stt-time-pending {
+  display: block;
+  padding: 0 4px;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0;
+  color: var(--stt-muted);
+}
+
+.stt-photo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stt-photo {
+  /* 4:5（縦長）。人物写真は上寄りでトリミングして頭が切れないようにする */
+  width: 64px;
+  height: 80px;
+  align-self: start;
+  border-radius: 5px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f6efe8, #eaeef4);
+}
+
+.stt-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 15%;
+}
+
+.stt-photo.is-logo {
+  display: grid;
+  place-items: center;
+  height: 54px;
+  padding: 5px;
+  border: 1px solid #eee7e0;
+  background: #fff;
+}
+
+.stt-photo.is-logo img {
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.stt-photo.double {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: visible;
+  background: none;
+}
+
+.stt-photo.double > .stt-photo {
+  flex-shrink: 0;
+}
+
+.stt-credit {
+  margin: 0;
+  width: 64px;
+  color: #8c857f;
+  font-size: 9px;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.stt-card-main {
+  min-width: 0;
+}
+
+.stt-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.stt-tag,
+.stt-mini-tag,
+.stt-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  height: 20px;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.stt-tag {
+  border: 1px solid #f0c199;
+  background: #FFF6EE;
+  color: var(--stt-orange);
+}
+
+.stt-tag.blue {
+  border-color: #b8cbe8;
+  background: var(--stt-blue-soft);
+  color: var(--stt-blue);
+}
+
+.stt-tag.gold {
+  border-color: #ecd0a0;
+  background: var(--stt-gold-soft);
+  color: #a9761b;
+}
+
+.stt-tag.solid-blue {
+  border-color: transparent;
+  background: var(--stt-blue);
+  color: #fff;
+}
+
+.stt-tag.solid-gold {
+  border-color: transparent;
+  background: var(--stt-gold);
+  color: #fff;
+}
+
+.stt-mini-tag {
+  border: 1px solid #e8e1da;
+  background: #fff;
+  color: #756f68;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stt-status {
+  border: 1px solid transparent;
+  border-radius: var(--stt-radius-pill);
+  margin-left: auto;
+}
+
+.stt-status.is-open {
+  border-color: #bfe3c6;
+  background: #EFFAF1;
+  color: #2f7d43;
+}
+
+.stt-status.is-full {
+  border-color: #dedad5;
+  background: #F4F2F0;
+  color: #7b7570;
+}
+
+.stt-status.is-soon {
+  border-color: #f3c4b8;
+  background: #FDF0EC;
+  color: #c0492b;
+}
+
+.stt-status.is-pending {
+  border-color: #e6ddcf;
+  background: #FAF6EE;
+  color: #8a7a5c;
+}
+
+.stt-card-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.stt-card-title .stt-card-subtitle {
+  display: block;
+  margin-top: 4px;
+  color: var(--stt-muted);
+  font-size: 12px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.stt-card-desc {
+  margin: 0 0 8px;
+  color: #4d4851;
+  font-size: 12px;
+  line-height: 1.68;
+  font-weight: 500;
+  text-align: left;
+}
+
+.stt-speaker-info {
+  margin: 0;
+  color: #343037;
+  font-size: 11px;
+  line-height: 1.55;
+  font-weight: 700;
+  text-align: left;
+}
+
+.stt-speaker-info .stt-role {
+  color: #837c74;
+  font-weight: 500;
+}
+
+.stt-note {
+  margin: 28px 12px 0;
+  text-align: right;
+  color: #6b656f;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.stt-empty {
+  margin: 22px 0 0;
+  padding: 28px 20px;
+  border: 1px dashed #edc49b;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--stt-orange-dark);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.stt-empty[hidden] {
+  display: none;
+}
+
+/* 注目カルーセルから遷移してきたカードの一時ハイライト */
+.stt-card.is-highlight {
+  border-color: var(--stt-orange);
+  box-shadow: 0 0 0 3px rgba(234, 112, 34, 0.2), 0 16px 34px rgba(150, 90, 40, 0.16);
+}
+
+/* =========================================
+   レスポンシブ
+========================================= */
+@media screen and (max-width: 1180px) {
+  .stt {
+    width: 100%;
+  }
+
+  .stt-board {
+    grid-template-columns: 1fr;
+  }
+
+  .stt-column.is-focused {
+    grid-column: auto;
+  }
+
+  .stt-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stt-stage-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .stt {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 16px 36px;
+    overflow: hidden;
+  }
+
+  .stt-head {
+    margin-bottom: 20px;
+  }
+
+  .stt-title {
+    font-size: 24px;
+    padding: 24px 0 12px;
+  }
+
+  .stt-title-icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 6px;
+    vertical-align: -4px;
+  }
+
+  .stt-tabs {
+    margin: 8px -16px 0;
+    border-radius: 0;
+    border-right: 0;
+    border-left: 0;
+    overflow-x: clip;
+    box-shadow: 0 10px 24px rgba(120, 90, 60, 0.07);
+  }
+
+  .stt-tab,
+  .stt-tab:first-child,
+  .stt-tab:last-child {
+    min-height: 48px;
+    font-size: 13px;
+    padding: 0 4px;
+    gap: 0;
+    border-radius: 0;
+  }
+
+  /* スマホではタブ内のアイコンを非表示 */
+  .stt-tab svg {
+    display: none;
+  }
+
+  .stt-tab.is-active::after {
+    bottom: -9px;
+    border-left-width: 9px;
+    border-right-width: 9px;
+    border-top-width: 9px;
+  }
+
+  .stt-toolbar {
+    display: block;
+    padding: 22px 0 18px;
+  }
+
+  .stt-chip-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 -16px;
+    padding: 0 16px 12px;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 80%, transparent 100%);
+    mask-image: linear-gradient(to right, #000 80%, transparent 100%);
+  }
+
+  .stt-chip-list::-webkit-scrollbar,
+  .stt-stage-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stt-chip {
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 0 19px;
+    font-size: 13px;
+  }
+
+  .stt-toolbar-actions {
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .stt-result-count {
+    text-align: right;
+    font-size: 12px;
+  }
+
+  .stt-stage-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    margin: 0 -16px 18px;
+    padding: 0 16px 10px;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 80%, transparent 100%);
+    mask-image: linear-gradient(to right, #000 80%, transparent 100%);
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .stt-stage-filter {
+    flex: 0 0 auto;
+    min-height: 54px;
+    min-width: 150px;
+    scroll-snap-align: start;
+  }
+
+  .stt-board {
+    gap: 14px;
+  }
+
+  .stt-stage-head {
+    position: relative;
+    padding: 16px 16px 14px;
+  }
+
+  .stt-stage-title {
+    font-size: 16px;
+  }
+
+  .stt-list {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    padding: 10px;
+  }
+
+  .stt-card {
+    grid-template-columns: 66px 62px 1fr;
+    gap: 10px;
+    min-height: 0;
+    padding: 12px 10px;
+    border-radius: 11px;
+  }
+
+  .stt-card.has-banner,
+  .stt-card.no-photo {
+    grid-template-columns: 66px 1fr;
+  }
+
+  .stt-time-badge {
+    min-height: 112px;
+    font-size: 15px;
+  }
+
+  .stt-photo {
+    width: 62px;
+    height: 78px;
+  }
+
+  .stt-photo.is-logo {
+    height: 52px;
+  }
+
+  .stt-credit {
+    width: 62px;
+    font-size: 8.5px;
+  }
+
+  .stt-card-title {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .stt-card-title .stt-card-subtitle {
+  display: block;
+  margin-top: 4px;
+  color: var(--stt-muted);
+  font-size: 12px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.stt-card-desc {
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  .stt-speaker-info {
+    font-size: 11px;
+  }
+
+  .stt-note {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .stt-card {
+    grid-template-columns: 58px 54px 1fr;
+    gap: 8px;
+    padding: 10px 8px;
+  }
+
+  .stt-card.has-banner,
+  .stt-card.no-photo {
+    grid-template-columns: 58px 1fr;
+  }
+
+  .stt-time-badge {
+    min-height: 108px;
+    font-size: 13px;
+  }
+
+  .stt-photo {
+    width: 54px;
+    height: 68px;
+  }
+
+  .stt-photo.is-logo {
+    height: 46px;
+  }
+
+  .stt-credit {
+    width: 54px;
+    font-size: 8px;
+  }
+}

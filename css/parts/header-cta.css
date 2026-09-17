@@ -1,0 +1,240 @@
+@charset "UTF-8";
+/* ============================================================
+   css/parts/header-cta.css
+   ヘッダーのCTAボタン／ユーティリティリンクの追加スタイル
+   ------------------------------------------------------------
+   ・common.css の .header__cta / .header__utility-link 系と
+     同じセレクタ形で書いており、common.css の直後に読み込むことで
+     上書きされる（他ページ・他要素には影響しない）
+   ・内容
+       1. header__cta を3ボタン（来場事前登録／招待状請求／出展申し込む）
+          に対応させるためのサイズ調整と配色追加
+       2. header__top-right のユーティリティリンクが4本になったので
+          幅の詰めと折り返しの許可
+       3. SPメニュー（parts/sp-nav.php）で使う追加配色
+   ・配色はサイトの色分けに合わせる
+       来場者向け … 紺  #184A9A
+       出展者向け … オレンジ #EA7022
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. header__cta（3ボタン）
+   ------------------------------------------------------------ */
+html body header .header__bottom .header__cta--triple .header__cta-link {
+  min-width: 132px;
+  padding: 0.45rem 2.4rem 0.45rem 1.2rem;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-align: center;
+}
+html body header .header__bottom .header__cta--triple .header__cta-link::after {
+  right: 10px;
+}
+@media screen and (max-width: 1400px) {
+  html body header .header__bottom .header__cta--triple .header__cta-link {
+    min-width: 118px;
+    padding: 0.45rem 2rem 0.45rem 0.8rem;
+    font-size: 1.15rem;
+    margin-left: 0.4rem;
+  }
+  html body header .header__bottom .header__cta--triple .header__cta-link::after {
+    right: 8px;
+    width: 6px;
+    height: 10px;
+  }
+}
+/* 1199px以下は3ボタンがロゴとぶつかるため、
+   width:100%（common.css）を解除して内容ぴったりまで縮められるようにする。
+   あわせてロゴも少しだけ小さくして横幅を確保する。 */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  html body header .header__bottom .header__cta--triple {
+    min-width: 0;
+    flex-shrink: 1;
+  }
+  html body header .header__bottom .header__cta--triple .header__cta-link {
+    width: auto;
+    min-width: 0;
+    padding: 0.4rem 1.6rem 0.4rem 0.6rem;
+    font-size: 1.05rem;
+    margin-left: 0.3rem;
+  }
+  html body header .header__bottom .header__cta--triple .header__cta-link::after {
+    right: 6px;
+    width: 5px;
+    height: 9px;
+  }
+  html body header .header__bottom .header__title--split .header__title-link--ksh img {
+    max-height: 2.4rem;
+    width: auto;
+  }
+  html body header .header__bottom .header__title--split .header__title-link--asia img,
+  html body header .header__bottom .header__title--split .header__title-link--agri img {
+    max-height: 3.2rem;
+    width: auto;
+  }
+}
+
+/* SP（767px以下）… .header__cta は幅90%の絶対配置になるため、
+   3ボタンが収まるようさらに詰める（狭い端末では2行に折り返す） */
+@media screen and (max-width: 767px) {
+  html body header .header__bottom .header__cta--triple .header__cta-link {
+    min-width: 0;
+    padding: 0.4rem 1.4rem 0.4rem 0.5rem;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    white-space: normal;
+    margin: 0 0.2rem;
+  }
+  html body header .header__bottom .header__cta--triple .header__cta-link::after {
+    right: 5px;
+    width: 5px;
+    height: 9px;
+  }
+}
+
+/* 配色：来場＝紺ベタ、招待状＝白地＋紺枠 */
+html body header .header__cta .header__cta-link.header__cta-link--visit {
+  background-color: #184A9A;
+  color: #FFFFFF;
+  border: 2px solid #184A9A;
+}
+html body header .header__cta .header__cta-link.header__cta-link--visit::after {
+  background-image: url(../../images/common/icon-arrow-white.svg);
+}
+html body header .header__cta .header__cta-link.header__cta-link--invite {
+  background-color: #FFFFFF;
+  color: #184A9A;
+  border: 2px solid #184A9A;
+}
+html body header .header__cta .header__cta-link.header__cta-link--invite::after {
+  background-image: url(../../images/common/icon-arrow-blue.svg);
+}
+
+/* ------------------------------------------------------------
+   2. header__top-right のユーティリティリンク（4本）
+   ------------------------------------------------------------ */
+html body header .header__top .header__top-right {
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  row-gap: 0.2rem;
+}
+html body header .header__top .header__top-right .header__utility-link:not(:last-child) {
+  padding-right: 1.2rem;
+}
+@media screen and (max-width: 1400px) {
+  html body header .header__top .header__top-right {
+    font-size: 1.1rem;
+  }
+  html body header .header__top .header__top-right .header__utility-link:not(:last-child) {
+    padding-right: 0.9rem;
+  }
+}
+
+/* ------------------------------------------------------------
+   3. SPメニュー（parts/sp-nav.php）内のCTAボタン用の追加配色
+   メニューの背景が紺(#184A9A)なので、紺ベタ塗りだと文字が消える。
+   「出展者マイページ」は白地＋紺文字で反転させる。
+   ------------------------------------------------------------ */
+html body header .header__cta .header__cta-link.header__cta-link--mypage {
+  background-color: #FFFFFF;
+  color: #184A9A;
+  border: 2px solid #184A9A;
+}
+html body header .header__cta .header__cta-link.header__cta-link--mypage::after {
+  background-image: url(../../images/common/icon-arrow-blue.svg);
+}
+/* SPメニュー内では上の3ボタン用サイズ調整を解除して従来サイズに戻す */
+@media screen and (max-width: 991px) {
+  html body header .navigation .header__cta .header__cta-link {
+    min-width: auto;
+    font-size: 1.4rem;
+    white-space: normal;
+    text-align: left;
+  }
+}
+
+/* SPメニュー最下部のテキストリンク（お問い合わせ／出展者マイページ／メルマガ登録）
+   .nav__list は display:flex; flex-wrap:wrap のため、項目が2つ以上になると
+   横2列に折り返してしまう。縦1列に積む。 */
+@media screen and (max-width: 991px) {
+  html body header .sp-nav nav .nav__list.nav__list-spnav {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.4rem;
+  }
+  /* 折り返していたときと同じ見え方（下線が幅50%）を保つ */
+  html body header .sp-nav nav .nav__list.nav__list-spnav .nav__item {
+    width: 50%;
+  }
+}
+
+/* SPメニュー内の「招待状請求フォーム」だけ枠線を白にする。
+   メニューの背景が紺(#184A9A)のため、PCと同じ紺の枠線だと
+   輪郭がぼやけて見えるため。文字色は青のまま。 */
+@media screen and (max-width: 991px) {
+  html body header .sp-nav .header__cta .header__cta-link.header__cta-link--invite {
+    border-color: #FFFFFF;
+  }
+}
+
+/* ------------------------------------------------------------
+   4. ヘッダー（header__top / header__bottom）の高さとボタンサイズ
+   ------------------------------------------------------------
+   「上下が窮屈でボタンも小さい」という声を受けた調整。
+   ヘッダーが高くなるとFV（下のコンテンツ）の見える面積が減るので、
+   PC全体で +14px 程度に収まる範囲だけ広げている。
+       header__top     … padding 0.5rem → 0.9rem     （+8px）
+       header__bottom  … ロゴ行 padding 1rem → 1.3rem（+6px）
+       CTAボタン       … 高さ 約32px → 約38px / 文字 1.25rem → 1.35rem
+   ボタンは画面幅ごとに3段階で縮める既存の指定（上の1.）に合わせて、
+   同じブレークポイントで段階的に指定し直している。
+   ------------------------------------------------------------ */
+@media screen and (min-width: 992px) {
+  html body header .header__top {
+    padding: 0.9rem 0;
+  }
+  html body header .header__bottom .header__title--split {
+    padding: 1.3rem 0;
+  }
+  html body header .header__bottom .header__cta--triple .header__cta-link {
+    min-width: 148px;
+    padding: 0.7rem 2.6rem 0.7rem 1.4rem;
+    font-size: 1.35rem;
+  }
+  html body header .header__bottom .header__cta--triple .header__cta-link::after {
+    right: 12px;
+    width: 8px;
+    height: 13px;
+  }
+}
+/* 1400px以下：ロゴとぶつからないよう控えめに */
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+  html body header .header__bottom .header__cta--triple .header__cta-link {
+    min-width: 132px;
+    padding: 0.7rem 2.2rem 0.7rem 1rem;
+    font-size: 1.25rem;
+    margin-left: 0.4rem;
+  }
+  html body header .header__bottom .header__cta--triple .header__cta-link::after {
+    right: 10px;
+    width: 7px;
+    height: 12px;
+  }
+}
+/* 1199px以下：内容ぴったりまで縮める指定（上の1.）は維持しつつ高さだけ確保 */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  html body header .header__bottom .header__cta--triple .header__cta-link {
+    width: auto;
+    min-width: 0;
+    padding: 0.65rem 1.8rem 0.65rem 0.8rem;
+    font-size: 1.15rem;
+    margin-left: 0.3rem;
+  }
+  html body header .header__bottom .header__cta--triple .header__cta-link::after {
+    right: 7px;
+    width: 6px;
+    height: 10px;
+  }
+}

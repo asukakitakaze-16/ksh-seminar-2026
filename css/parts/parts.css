@@ -227,10 +227,7 @@ main * {
 .top-cta .cta-item-apply.attendance .button-text {
   color: #000;
 }
-.top-cta .cta-item-apply.attendance .btn-apply {
-  background: #9A9A9A;
-}
-.top-cta .cta-item-apply.attendance .btn-apply.small {
+.top-cta .cta-item-apply.attendance .btn-apply:not(.wo):not(.bo):not(.lo):not(.bw):not(.blue) {
   background: #184A9A;
 }
 .top-cta .cta-item-apply.attendance .illust {
@@ -1028,6 +1025,23 @@ main * {
   padding: 15px;
   justify-content: center;
 }
+.btn-navy {
+  background-color: #184A9A;
+  font-size: 16px;
+  padding: 15px;
+  justify-content: center;
+}
+.btn-outline-blue {
+  background-color: #FFFFFF;
+  color: #184A9A;
+  border: 2px solid #184A9A;
+  font-size: 16px;
+  padding: 13px;
+  justify-content: center;
+}
+.btn-outline-blue .btn-icon path {
+  fill: #184A9A;
+}
 
 /* --- 下部のサブアクションエリア --- */
 .sub-action-area {
@@ -1169,6 +1183,14 @@ main * {
      ========================================= */
   /* 定義リスト（地下鉄・電車） */
   /* 下部の車・タクシーセクション */
+  /* =========================================
+     交通のご案内内：シャトルバスへの導線
+     ========================================= */
+  /* 日本語が語中で折れないよう、文節単位のまとまりとして扱う共通クラス */
+  /* =========================================
+     無料シャトルバス案内
+     ========================================= */
+  /* 「会場アクセス」カード内の1セクションとして、交通のご案内と同じ階層に置く */
 }
 .ex-access a {
   color: #4B91D6;
@@ -1247,7 +1269,9 @@ main * {
 @media screen and (max-width: 900px) {
   .ex-access .access-layout .map-area {
     width: 100%;
-    height: 400px;
+    /* iframe の min-height(450px) が固定400pxを超えて溢れ、
+       直後のコンテンツに重なっていたため高さは中身に合わせる */
+    height: auto;
     margin-top: 30px;
   }
 }
@@ -1354,6 +1378,258 @@ main * {
 .ex-access .car-section {
   margin-top: 30px;
   font-size: 14px;
+}
+.ex-access .transport-shuttle-note {
+  margin: 15px 0 0;
+  padding: 12px 15px;
+  background: #FFF2E1;
+  border-radius: 6px;
+  line-height: 1.8;
+}
+.ex-access .transport-shuttle-note .shuttle-tag {
+  display: inline-block;
+  background: #E66C2C;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 5px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.ex-access .transport-shuttle-note .shuttle-anchor {
+  display: inline-block;
+  white-space: nowrap;
+}
+.ex-access .shuttle-nw {
+  display: inline-block;
+}
+.ex-access .shuttle-block {
+  margin-top: 40px;
+  /* h3「無料シャトルバスのご案内」は交通のご案内と同じ見た目（親の指定をそのまま使う） */
+  /* 小見出しは transport-item の h4 と同じ階層・同じ見た目 */
+  /* --- リード文（バス欄の導線パネルと同じ配色でまとまりを示す） --- */
+  /* --- 運行日 --- */
+  /* 直上の h4 より大きく見えないよう16pxに揃える（差は色で付ける） */
+  /* --- 時刻表 --- */
+  /* --- 乗降場所マップ --- */
+  /* --- ご利用に際して --- */
+}
+@media screen and (max-width: 575px) {
+  .ex-access .shuttle-block {
+    margin-top: 30px;
+  }
+}
+.ex-access .shuttle-block h3 {
+  margin-bottom: 20px;
+}
+.ex-access .shuttle-block h4 {
+  margin-top: 35px;
+}
+@media screen and (max-width: 575px) {
+  .ex-access .shuttle-block h4 {
+    margin-top: 30px;
+  }
+}
+.ex-access .shuttle-block .shuttle-lead {
+  margin: 0;
+  padding: 15px 20px;
+  background: #FFF2E1;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+.ex-access .shuttle-block .shuttle-lead i {
+  color: #E66C2C;
+  margin-right: 8px;
+}
+@media screen and (max-width: 575px) {
+  .ex-access .shuttle-block .shuttle-lead {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+.ex-access .shuttle-block .shuttle-date {
+  font-size: 16px;
+  font-weight: bold;
+  color: #184A9A;
+  margin: 0 0 15px;
+  /* 狭い画面でも日付の途中で折り返さないようにまとまりで扱う */
+}
+@media screen and (max-width: 575px) {
+  .ex-access .shuttle-block .shuttle-date {
+    font-size: 15px;
+  }
+}
+.ex-access .shuttle-block .shuttle-date .shuttle-date-nw {
+  display: inline-block;
+}
+@media screen and (min-width: 576px) {
+  .ex-access .shuttle-block .shuttle-table-wrap {
+    overflow-x: auto;
+  }
+}
+.ex-access .shuttle-block .shuttle-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.6;
+  /* スマホでは1便ずつカード状に積む */
+}
+.ex-access .shuttle-block .shuttle-table th,
+.ex-access .shuttle-block .shuttle-table td {
+  border: 1px solid #ccc;
+  padding: 14px 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+.ex-access .shuttle-block .shuttle-table thead th {
+  background: #FFF2E1;
+  border-bottom: 2px solid #E66C2C;
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.ex-access .shuttle-block .shuttle-table tbody th {
+  background: #FAFAFA;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+}
+.ex-access .shuttle-block .shuttle-table .shuttle-arrow {
+  color: #E66C2C;
+  font-weight: bold;
+  padding: 0 2px;
+}
+@media screen and (max-width: 575px) {
+  .ex-access .shuttle-block .shuttle-table {
+    display: block;
+    font-size: 14px;
+  }
+  .ex-access .shuttle-block .shuttle-table thead {
+    display: none;
+  }
+  .ex-access .shuttle-block .shuttle-table tbody,
+  .ex-access .shuttle-block .shuttle-table tr,
+  .ex-access .shuttle-block .shuttle-table th,
+  .ex-access .shuttle-block .shuttle-table td {
+    display: block;
+    width: 100%;
+  }
+  .ex-access .shuttle-block .shuttle-table tr {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .ex-access .shuttle-block .shuttle-table tr + tr {
+    margin-top: 15px;
+  }
+  .ex-access .shuttle-block .shuttle-table tbody th {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: #FFF2E1;
+    text-align: center;
+    white-space: normal;
+    padding: 12px 15px;
+  }
+  .ex-access .shuttle-block .shuttle-table td {
+    border: none;
+    border-bottom: 1px dashed #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    text-align: right;
+  }
+  .ex-access .shuttle-block .shuttle-table td:last-child {
+    border-bottom: none;
+  }
+  .ex-access .shuttle-block .shuttle-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    font-size: 13px;
+    color: #184A9A;
+    margin-right: 10px;
+  }
+}
+.ex-access .shuttle-block .shuttle-map-grid {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  .ex-access .shuttle-block .shuttle-map-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+.ex-access .shuttle-block .shuttle-map {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  /* 縦横比の違う2枚を並べても高さが揃うように上限を高さで持たせる */
+}
+.ex-access .shuttle-block .shuttle-map img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 380px;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #E5E5E5;
+  border-radius: 6px;
+  background: #fff;
+}
+@media screen and (max-width: 767px) {
+  .ex-access .shuttle-block .shuttle-map img {
+    width: 100%;
+    max-width: 400px;
+    max-height: none;
+  }
+}
+.ex-access .shuttle-block .shuttle-map figcaption {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.7;
+  /* 施設名・目印が語中で折れないようにまとまりで扱う */
+}
+.ex-access .shuttle-block .shuttle-map figcaption .shuttle-map-place {
+  display: block;
+  font-weight: bold;
+  color: #184A9A;
+}
+.ex-access .shuttle-block .shuttle-map figcaption .shuttle-map-nw {
+  display: inline-block;
+}
+.ex-access .shuttle-block .shuttle-notes {
+  list-style: none;
+  margin: 0;
+  padding: 20px 25px;
+  background: #F7F7F7;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.8;
+  /* ぶら下げインデントを効かせるため、中央寄せの継承を解除 */
+  text-align: left;
+}
+@media screen and (max-width: 575px) {
+  .ex-access .shuttle-block .shuttle-notes {
+    padding: 15px;
+    font-size: 13px;
+  }
+}
+.ex-access .shuttle-block .shuttle-notes li {
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+.ex-access .shuttle-block .shuttle-notes li::before {
+  content: "※";
+  color: #E66C2C;
+  font-weight: bold;
+}
+.ex-access .shuttle-block .shuttle-notes li + li {
+  margin-top: 8px;
 }
 
 .ex_cta {

@@ -15,25 +15,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="keywords" content="展示会, 見本市, 商談会, 販路拡大, 販路開拓, 海外輸出, 輸出支援, バイヤー向け, ビジネスチャンス,食品,観光,外食,宿泊,ホスピタリティ,ホテル,レストラン,サービス産業,九州, 沖縄, 福岡, マリンメッセ福岡, 2026年, 10月">
     <meta name="author" content="Japan Management Association (JMA)">
     <meta name="robots" content="index, follow">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta property="og:image" content="images/common/ogp.jpg">
+    <link rel="icon" type="image/png" href="./images/assets/favicon.ico">
+    <meta property="og:image" content="./images/assets/ogp.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/base/normalize.css">
-    <link rel="stylesheet" href="./css/base/common.css">
+        <link rel="stylesheet" href="./css/base/normalize.css?2026v3">
+    <link rel="stylesheet" href="./css/base/common.css?2026v3">
+    <link rel="stylesheet" href="./css/parts/header-cta.css?2026v3">
 <script src="https://unpkg.com/lucide@latest"></script>
     <meta property="og:title" content="セミナー | 第8回 九州・沖縄 宿泊外食産業展 / 第2回 アジア食品輸出展">
   <meta property="og:description" content="【来場登録受付中】九州・沖縄最大級の宿泊外食産業展で、最新の設備・サービス・食材を一堂にご覧いただけます。商談・情報収集・業界ネットワーキングの絶好の機会です。来場メリット、登録方法などの詳細はこちらをご確認ください。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ksh.jma.or.jp/">
-  <meta property="og:image" content="images/common/ogp.jpg">
+  <meta property="og:image" content="https://ksh.jma.or.jp/images/common/ogp.jpg">
   <meta property="og:site_name" content="セミナー | 第8回 九州・沖縄 宿泊外食産業展 / 第2回 アジア食品輸出展">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="/favicon.ico">
 
-<link rel="canonical" href="https://ksh.jma.or.jp/seminar.php">
-<link rel="stylesheet" href="./css/page/seminar.css"><link rel="stylesheet" href="./css/parts/parts.css"><link rel="stylesheet" href="./css/parts/button.css"><link rel="stylesheet" href="css/page/seminar-local.css">
+<link rel="canonical" href="https://ksh.jma.or.jp/seminar.php"><link rel="stylesheet" href="./css/page/seminar.css?2026v3"><link rel="stylesheet" href="./css/parts/parts.css?2026v3"><link rel="stylesheet" href="./css/parts/button.css?2026v3"><link rel="stylesheet" href="./css/page/seminar_timetable.css?2026v3"><script src="https://cdn.tailwindcss.com"></script>    <script>
+        tailwind.config = {
+            prefix: 'tw-',
+            corePlugins: {
+                preflight: false,
+            },
+            theme: {
+                extend: {
+                    fontSize: {
+                        'xs': '1.2rem',
+                        'sm': '1.4rem',
+                        'base': '1.6rem',
+                        'lg': '1.8rem',
+                        'xl': '2.0rem',
+                        '2xl': '2.4rem',
+                        '3xl': '3.0rem',
+                        '4xl': '3.6rem',
+                        '5xl': '4.8rem',
+                        '6xl': '6.0rem',
+                    },
+                    colors: {"primary":"#EA7022","primaryDark":"#c25e1b","secondary":"#0f172a","bgLight":"#fff7ed","grayBg":"#F7F7F7"}                }
+            }        };
+    </script>
 
 
 
@@ -66,11 +88,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="header__top-right">
                 <div class="header__lang-switch">
-                    <a href="./" class="header__lang-link jp">JP</a>
+                    <a href="https://ksh.jma.or.jp/" class="header__lang-link jp">JP</a>
                     <a href="https://ksh.jma.or.jp/en.php" class="header__lang-link en off">EN</a>
                 </div>
-                <!-- お問い合わせリンクはCTAボタンに移動 -->
                 <!-- <a href="#" class="header__utility-link">プレス・取材申し込み</a> -->
+                <a href="https://pages.jma.or.jp/ksh-inquiryform.html" target="_blank" class="header__utility-link">お問い合わせ</a>
+                <a href="https://velsion.jp/kyusyu-2026/web-guide" target="_blank" class="header__utility-link">出展者・出展製品Webガイド</a>
+                <a href="https://velsion.jp/kyusyu-2026/exhibitor/mypage/login" target="_blank" class="header__utility-link">出展者マイページ</a>
                 <a href="https://pages.jma.or.jp/newmailmagazine_kyusyu_lp.html" target="_blank" class="header__utility-link">メルマガ登録</a>
             </div>
         </div>
@@ -90,11 +114,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img src="./images/common/logo_agri.webp" alt="九州アグロ・イノベーション" class="header__logo-main">
                 </a>
             </h1>
-            <div class="header__cta">
-                <a href="https://pages.jma.or.jp/ksh-inquiryform.html" target="_blank" class="header__cta-link header__cta-link--contact">お問い合わせ</a>
+            <div class="header__cta header__cta--triple">
+                <a href="https://velsion.jp/kyusyu-2026/visitor/register/terms" target="_blank" class="header__cta-link header__cta-link--visit">【来場】事前登録</a>
+                <a href="https://form.run/@dUy974ZcZJpvSpUjrqlk" target="_blank" class="header__cta-link header__cta-link--invite">招待状請求</a>
                 <a href="https://julaty.com/sightseeing-kyusyu2026-apply/ja/exhibition_application" target="_blank" class="header__cta-link header__cta-link--exhibit">【出展】申し込む</a>
-                <!-- <a href="#" class="header__cta-link header__cta-link--docs">【出展】資料請求する</a>
-                <a href="#" class="header__cta-link header__cta-link--register">【来場】登録する</a> -->
             </div>
         </div>
     </div>
@@ -106,16 +129,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="https://ksh.jma.or.jp/index.php">TOP<span class="arrow-icon js-plusIcon"></span></a>
             <ul class="nav-child">
                 <li class="is-sp"><a href="https://ksh.jma.or.jp/index.php">TOPページ</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#buyer-interview">海外ホステッドバイヤーインタビュー</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-about">九州・沖縄 宿泊外食産業展＆アジア食品輸出展とは？</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-reason">九州開催が選ばれる理由</a></li>
                 <li><a href="https://ksh.jma.or.jp/index.php#top-apoint">事前アポイント制商談会</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-exhibitions">九州から世界へ。食のビジネスを広げる2つの展示会</a></li>
+                <li><a href="https://ksh.jma.or.jp/index.php#top-kento">出展・来場をご検討の方へ</a></li>
                 <li><a href="https://ksh.jma.or.jp/index.php#top-past">過去開催の様子</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-venue-movie">会場の雰囲気をご紹介</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#ksh-faq-section">よくある質問</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-kento">出展・ご来場をご検討の方へ</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-news">お知らせ</a></li>
             </ul>
         </li>
         <li class="nav__item has-child">
@@ -124,7 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="https://ksh.jma.or.jp/exhibit_foodservice.php">第8回 九州・沖縄 宿泊外食産業展</a></li>
                 <li><a href="https://ksh.jma.or.jp/exhibit_asia.php">第2回 アジア食品輸出展</a></li>
                 <li><a href="https://ksh.jma.or.jp/index.php#ksh-faq-section">よくあるご質問（FAQ）</a></li>
-                <li class="is-pc"><a href="https://ksh.jma.or.jp/index.php#access" target="_blank">アクセス</a></li>
+                <li class="is-pc"><a href="https://ksh.jma.or.jp/index.php#access">アクセス</a></li>
                 <!-- <li><a href="">この展示会とは</a></li>
                 <li><a href="">主催・協賛・運営組織について</a></li>
                 <li><a href="">前回開催報告</a></li>
@@ -143,6 +159,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="">出展料金・ブースについて</a></li>
                 <li><a href="">出展オプション</a></li> -->
                 <li><a href="https://julaty.com/sightseeing-kyusyu2026-apply/ja/exhibition_application?_gl=1*tc[…]oMA..&_ga=2.19930808.1832336698.1764028487-868031182.1760927779" target="_blank">出展申し込み／各種規定について</a></li>
+                <li><a href="https://velsion.jp/kyusyu-2026/exhibitor/mypage/login" target="_blank">出展者マイページ</a></li>
+                <li><a href="https://velsion.jp/kyusyu-2026/web-guide" target="_blank">出展者・出展製品Webガイド</a></li>
                 <!-- <li><a href="">出展資料ダウンロード</a></li> -->
 
             </ul>
@@ -163,23 +181,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li class="nav__item has-child is-pc">
             <a href="https://ksh.jma.or.jp/visit.php">来場をご検討の方へ<span class="arrow-icon js-plusIcon"></span></a>
             <ul class="nav-child">
-                <li><a href="seminar.html">セミナー</a></li>
                 <li><a href="https://ksh.jma.or.jp/visit.php#problem">こんなお悩みに</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#reason">来場する３つの理由</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#audience">来場対象</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#joint">２つの展示会紹介</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#merit">来場するメリット</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#register">来場登録</a></li>
+                <li><a href="https://ksh.jma.or.jp/visit.php#register">来場登録について</a></li>
+                <li><a href="https://ksh.jma.or.jp/seminar.php">セミナー</a></li>
                 <li><a href="https://ksh.jma.or.jp/visit.php#about">開催概要</a></li>
                 <li><a href="https://ksh.jma.or.jp/visit.php#ksh-faq-section">よくある質問</a></li>
             </ul>
         </li>
         <li class="nav__item is-sp">
         <a href="https://ksh.jma.or.jp/visit.php">来場をご検討の方へ</a>
+        </li>
+        <li class="nav__item is-sp">
+        <a href="https://velsion.jp/kyusyu-2026/visitor/register/terms" target="_blank">来場事前登録</a>
+        </li>
+        <li class="nav__item is-sp">
+        <a href="https://form.run/@dUy974ZcZJpvSpUjrqlk" target="_blank">招待状請求フォーム</a>
         </li> 
         <li class="nav__item has-child">
             <a href="javascript:void(0)" tabindex="-1">特別企画<span class="arrow-icon js-plusIcon"></span></a>
             <ul class="nav-child">
+                <li><a href="https://ksh.jma.or.jp/ex_pet_2026.php">ペットツーリズム</a></li>
                 <li><a href="https://nextleaders.jma.or.jp/fukuoka.html" target="_blank">ネクストリーダーズ</a></li>
             </ul>
         </li>
@@ -198,12 +219,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
     <ul class="nav__list nav__list-sub is-pc footeronly ft_nav_list">
         <li class="nav__item"><a href="https://pages.jma.or.jp/ksh-inquiryform.html" target="_blank">お問い合わせ</a></li>
-        <li class="nav__item"><a href="https://ksh.jma.or.jp/index.php#access" target="_blank">アクセス</a></li>
+        <li class="nav__item"><a href="https://ksh.jma.or.jp/index.php#access">アクセス</a></li>
         <!-- <li class="nav__item"><a href="">プレス・取材申し込み</a></li> -->
     </ul>
     <ul class="nav__list nav__list-spnav">
         <li class="nav__item"><a href="https://pages.jma.or.jp/ksh-inquiryform.html" target="_blank">お問い合わせ</a></li>
-        <!-- <li class="nav__item"><a href="https://ksh.jma.or.jp/index.php#access" target="_blank">アクセス</a></li> -->
+        <li class="nav__item"><a href="https://velsion.jp/kyusyu-2026/exhibitor/mypage/login" target="_blank">出展者マイページ</a></li>
+        <li class="nav__item"><a href="https://pages.jma.or.jp/newmailmagazine_kyusyu_lp.html" target="_blank">メルマガ登録</a></li>
+        <!-- <li class="nav__item"><a href="https://ksh.jma.or.jp/index.php#access">アクセス</a></li> -->
         <!-- <li class="nav__item"><a href="">プレス・取材申し込み</a></li> -->
     </ul>
     <!-- <ul class="nav__list nav__list-sub nav__list-footer">
@@ -218,11 +241,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="sp-nav" id="menu">
   <div class="header__cta">
-    <a href="https://pages.jma.or.jp/ksh-inquiryform.html" class="header__cta-link header__cta-link--contact" target="_blank">お問い合わせ</a>
     <a href="https://julaty.com/sightseeing-kyusyu2026-apply/ja/exhibition_application" class="header__cta-link header__cta-link--exhibit" target="_blank">【出展】申し込む</a>
-    <!-- <a href="#" class="header__cta-link header__cta-link--register">【来場】登録する</a>
-    <a href="#" class="header__cta-link header__cta-link--docs">【出展】資料請求する</a> -->
-    <a href="https://pages.jma.or.jp/newmailmagazine_kyusyu_lp.html" class="header__cta-link header__cta-link--mail" target="_blank">メルマガ登録</a>
+    <a href="https://velsion.jp/kyusyu-2026/visitor/register/terms" class="header__cta-link header__cta-link--register" target="_blank">【来場】事前登録</a>
+    <a href="https://form.run/@dUy974ZcZJpvSpUjrqlk" class="header__cta-link header__cta-link--invite" target="_blank">招待状請求フォーム</a>
+    <a href="https://velsion.jp/kyusyu-2026/web-guide" class="header__cta-link header__cta-link--docs" target="_blank">出展者・出展製品</a>
+    <!-- お問い合わせ／出展者マイページ／メルマガ登録は、メニュー最下部の
+         テキストリンク（parts/nav.php の .nav__list-spnav）に集約 -->
+    <!-- <a href="#" class="header__cta-link header__cta-link--docs">【出展】資料請求する</a> -->
   </div>
   <nav aria-label="グローバルナビゲーション">
     <ul class="nav__list">
@@ -230,16 +255,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="https://ksh.jma.or.jp/index.php">TOP<span class="arrow-icon js-plusIcon"></span></a>
             <ul class="nav-child">
                 <li class="is-sp"><a href="https://ksh.jma.or.jp/index.php">TOPページ</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#buyer-interview">海外ホステッドバイヤーインタビュー</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-about">九州・沖縄 宿泊外食産業展＆アジア食品輸出展とは？</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-reason">九州開催が選ばれる理由</a></li>
                 <li><a href="https://ksh.jma.or.jp/index.php#top-apoint">事前アポイント制商談会</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-exhibitions">九州から世界へ。食のビジネスを広げる2つの展示会</a></li>
+                <li><a href="https://ksh.jma.or.jp/index.php#top-kento">出展・来場をご検討の方へ</a></li>
                 <li><a href="https://ksh.jma.or.jp/index.php#top-past">過去開催の様子</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-venue-movie">会場の雰囲気をご紹介</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#ksh-faq-section">よくある質問</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-kento">出展・ご来場をご検討の方へ</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-news">お知らせ</a></li>
             </ul>
         </li>
         <li class="nav__item has-child">
@@ -248,7 +266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="https://ksh.jma.or.jp/exhibit_foodservice.php">第8回 九州・沖縄 宿泊外食産業展</a></li>
                 <li><a href="https://ksh.jma.or.jp/exhibit_asia.php">第2回 アジア食品輸出展</a></li>
                 <li><a href="https://ksh.jma.or.jp/index.php#ksh-faq-section">よくあるご質問（FAQ）</a></li>
-                <li class="is-pc"><a href="https://ksh.jma.or.jp/index.php#access" target="_blank">アクセス</a></li>
+                <li class="is-pc"><a href="https://ksh.jma.or.jp/index.php#access">アクセス</a></li>
                 <!-- <li><a href="">この展示会とは</a></li>
                 <li><a href="">主催・協賛・運営組織について</a></li>
                 <li><a href="">前回開催報告</a></li>
@@ -267,6 +285,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="">出展料金・ブースについて</a></li>
                 <li><a href="">出展オプション</a></li> -->
                 <li><a href="https://julaty.com/sightseeing-kyusyu2026-apply/ja/exhibition_application?_gl=1*tc[…]oMA..&_ga=2.19930808.1832336698.1764028487-868031182.1760927779" target="_blank">出展申し込み／各種規定について</a></li>
+                <li><a href="https://velsion.jp/kyusyu-2026/exhibitor/mypage/login" target="_blank">出展者マイページ</a></li>
+                <li><a href="https://velsion.jp/kyusyu-2026/web-guide" target="_blank">出展者・出展製品Webガイド</a></li>
                 <!-- <li><a href="">出展資料ダウンロード</a></li> -->
 
             </ul>
@@ -287,23 +307,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li class="nav__item has-child is-pc">
             <a href="https://ksh.jma.or.jp/visit.php">来場をご検討の方へ<span class="arrow-icon js-plusIcon"></span></a>
             <ul class="nav-child">
-                <li><a href="seminar.html">セミナー</a></li>
                 <li><a href="https://ksh.jma.or.jp/visit.php#problem">こんなお悩みに</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#reason">来場する３つの理由</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#audience">来場対象</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#joint">２つの展示会紹介</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#merit">来場するメリット</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#register">来場登録</a></li>
+                <li><a href="https://ksh.jma.or.jp/visit.php#register">来場登録について</a></li>
+                <li><a href="https://ksh.jma.or.jp/seminar.php">セミナー</a></li>
                 <li><a href="https://ksh.jma.or.jp/visit.php#about">開催概要</a></li>
                 <li><a href="https://ksh.jma.or.jp/visit.php#ksh-faq-section">よくある質問</a></li>
             </ul>
         </li>
         <li class="nav__item is-sp">
         <a href="https://ksh.jma.or.jp/visit.php">来場をご検討の方へ</a>
+        </li>
+        <li class="nav__item is-sp">
+        <a href="https://velsion.jp/kyusyu-2026/visitor/register/terms" target="_blank">来場事前登録</a>
+        </li>
+        <li class="nav__item is-sp">
+        <a href="https://form.run/@dUy974ZcZJpvSpUjrqlk" target="_blank">招待状請求フォーム</a>
         </li> 
         <li class="nav__item has-child">
             <a href="javascript:void(0)" tabindex="-1">特別企画<span class="arrow-icon js-plusIcon"></span></a>
             <ul class="nav-child">
+                <li><a href="https://ksh.jma.or.jp/ex_pet_2026.php">ペットツーリズム</a></li>
                 <li><a href="https://nextleaders.jma.or.jp/fukuoka.html" target="_blank">ネクストリーダーズ</a></li>
             </ul>
         </li>
@@ -322,12 +345,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
     <ul class="nav__list nav__list-sub is-pc footeronly ft_nav_list">
         <li class="nav__item"><a href="https://pages.jma.or.jp/ksh-inquiryform.html" target="_blank">お問い合わせ</a></li>
-        <li class="nav__item"><a href="https://ksh.jma.or.jp/index.php#access" target="_blank">アクセス</a></li>
+        <li class="nav__item"><a href="https://ksh.jma.or.jp/index.php#access">アクセス</a></li>
         <!-- <li class="nav__item"><a href="">プレス・取材申し込み</a></li> -->
     </ul>
     <ul class="nav__list nav__list-spnav">
         <li class="nav__item"><a href="https://pages.jma.or.jp/ksh-inquiryform.html" target="_blank">お問い合わせ</a></li>
-        <!-- <li class="nav__item"><a href="https://ksh.jma.or.jp/index.php#access" target="_blank">アクセス</a></li> -->
+        <li class="nav__item"><a href="https://velsion.jp/kyusyu-2026/exhibitor/mypage/login" target="_blank">出展者マイページ</a></li>
+        <li class="nav__item"><a href="https://pages.jma.or.jp/newmailmagazine_kyusyu_lp.html" target="_blank">メルマガ登録</a></li>
+        <!-- <li class="nav__item"><a href="https://ksh.jma.or.jp/index.php#access">アクセス</a></li> -->
         <!-- <li class="nav__item"><a href="">プレス・取材申し込み</a></li> -->
     </ul>
     <!-- <ul class="nav__list nav__list-sub nav__list-footer">
@@ -335,7 +360,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li class="nav__item"><a href="https://ksh.jma.or.jp/apoint.php">事前アポイント制商談会</a></li>
     </ul> -->
 </nav></div>
-      </div>
+    </div>
 
 
 </header>
@@ -348,249 +373,667 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     
-<div id="seminar-program" class="seminar-program">
-  <section class="seminar-reference-head wrapper">
-    <p class="seminar-reference-head__eyebrow">SEMINAR PROGRAM</p>
-    <h1><span>ステージ・</span>セミナー</h1>
-    <div class="seminar-reference-head__badges">
-      <span>聴講無料</span>
-      <span>事前登録制</span>
-    </div>
-  </section>
-  <section class="seminar-hero">
-    <img src="images/seminar/fv_1.webp" alt="セミナー会場の様子" class="seminar-hero__image">
-    <div class="seminar-hero__overlay"></div>
-    <div class="seminar-hero__content wrapper">
-      <p class="seminar-hero__eyebrow">SEMINAR PROGRAM 2026</p>
-      <h1>現場を変える知見と、<br>次の一手に出会う2日間。</h1>
-      <p>観光・食・宿泊DX・省人化・エネルギー戦略。<br>九州のビジネスを前へ進める実践的なセミナーを開催します。</p>
-      <div class="seminar-hero__meta">
-        <span>2026.10.28 WED — 29 THU</span>
-        <span>マリンメッセ福岡 B館</span>
-      </div>
-    </div>
-  </section>
+    <div id="root" class="seminar">
+        <!-- 0. ファーストビュー (FV) -->
+        <section class="tw-relative tw-min-h-[400px] md:tw-h-[450px] tw-w-full tw-overflow-hidden tw-flex tw-items-center tw-justify-center">
+            <img src="images/seminar/fv_1.webp?w=1600&q=80" alt="セミナー会場" class="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover">
+            <div class="tw-absolute tw-inset-0 fv-overlay"></div>
 
-  <section class="seminar-featured wrapper" aria-labelledby="featured-title">
-    <div class="section-heading">
-      <p>FEATURED SESSIONS</p>
-      <h2 id="featured-title">注目のセミナー</h2>
-      <span>観光資源、食の価値、宿泊業の経営課題を多角的に掘り下げます。</span>
-    </div>
-    <div class="featured-grid">
-      <a class="featured-card" href="#session-a1">
-        <img src="images/seminar/speakers/masugu-kazumitsu.jpg" alt="真次 一満 氏">
-        <div class="featured-card__body">
-          <span class="featured-card__date">10.28 WED / A1</span>
-          <h3>観光資源としての養殖魚</h3>
-          <p>観光と食における陸上養殖の可能性</p>
-          <strong>真次 一満 氏</strong>
+            <div class="tw-relative tw-z-10 tw-w-full tw-max-w-[1200px] tw-mx-auto tw-px-4 tw-text-center">
+
+
+                <!-- Main Title -->
+                <h1 class="tw-text-[32px] md:tw-text-[42px] tw-font-black tw-leading-tight tw-mb-[16px] tw-tracking-tight tw-text-white tw-drop-shadow-xl animate-in" style="animation-delay: 0.1s;">
+                    現場を変える知見と、<br>次の一手に出会う2日間。
+                </h1>
+
+                <!-- Lead Text -->
+                <p class="tw-text-[16px] md:tw-text-[22px] tw-font-bold tw-leading-relaxed tw-max-w-6xl tw-mx-auto tw-mb-[24px] tw-text-white/90 tw-drop-shadow-md animate-in" style="animation-delay: 0.2s;">
+                    観光・食・宿泊DX・省人化・エネルギー戦略。<br class="tw-hidden md:tw-block">
+                    九州のビジネスを前へ進める実践的なセミナーを開催します。
+                </p>
+
+                <!-- Stats Impact -->
+                <!-- 件数（#sttTotalCount / #sttStageCount）はページ下部のJSが seminars 配列から自動計算します。
+                     HTMLの数字はJSが無効な場合のフォールバックです。 -->
+                <div class="animate-in" style="animation-delay: 0.3s;">
+                    <div class="tw-flex tw-items-baseline tw-justify-center tw-text-[#E5A33B] tw-font-bold tw-text-[20px] md:tw-text-[26px] tw-leading-none tw-drop-shadow-lg">
+                        <span>全</span>
+                        <span id="sttTotalCount" class="tw-text-[42px] md:tw-text-[56px] tw-font-black tw-mx-[8px]">11</span>
+                        <span>セミナー</span>
+                    </div>
+                </div>
+            </div>
+</section>
+
+<div class="seminar_inner">
+
+
+        <!-- 2. 重要情報バナー -->
+        <div class="banner tw-bg-[#FFF8F4] tw-border-b tw-border-orange-100 tw-px-4 tw-py-6 md:tw-py-8">
+            <div class="tw-max-w-[1200px] tw-mx-auto">
+                <div class="tw-flex tw-flex-wrap tw-items-center tw-justify-center tw-gap-6 md:tw-gap-14 tw-mb-4">
+                    <div class="tw-flex tw-items-center tw-gap-3">
+                        <div class="icons tw-w-11 tw-h-11 tw-rounded-2xl tw-bg-white tw-flex tw-items-center tw-justify-center tw-text-green-600 tw-shadow-md tw-border tw-border-green-100">
+                            <i data-lucide="ticket" class="tw-w-[22px] tw-h-[22px]"></i>
+                        </div>
+                        <span class="tw-text-base md:tw-text-lg tw-font-black tw-text-gray-800 tw-tracking-tight">聴講無料</span>
+                    </div>
+                    <div class="tw-hidden sm:tw-block tw-w-px tw-h-6 tw-bg-orange-200 tw-opacity-40"></div>
+                    <div class="tw-flex tw-items-center tw-gap-3">
+                        <div class="icons tw-w-11 tw-h-11 tw-rounded-2xl tw-bg-white tw-flex tw-items-center tw-justify-center tw-text-[#174A9A] tw-shadow-md tw-border tw-border-blue-100">
+                            <i data-lucide="users" class="tw-w-[22px] tw-h-[22px]"></i>
+                        </div>
+                        <span class="tw-text-base md:tw-text-lg tw-font-black tw-text-gray-800 tw-tracking-tight">全<span id="sttTotalCount2">11</span>講演／<span id="sttStageCount">2</span>日間</span>
+                    </div>
+                    <div class="tw-hidden sm:tw-block tw-w-px tw-h-6 tw-bg-orange-200 tw-opacity-40"></div>
+                    <div class="tw-flex tw-items-center tw-gap-3">
+                        <div class="icons tw-w-11 tw-h-11 tw-rounded-2xl tw-bg-white tw-flex tw-items-center tw-justify-center tw-text-[#EA7022] tw-shadow-md tw-border tw-border-orange-200">
+                            <i data-lucide="check-circle" class="tw-w-[22px] tw-h-[22px]"></i>
+                        </div>
+                        <span class="tw-text-base md:tw-text-lg tw-font-black tw-text-gray-800 tw-tracking-tight">事前登録制</span>
+                    </div>
+                </div>
+                <div class="zanseki tw-flex tw-items-center tw-justify-center tw-gap-2 tw-text-[#EA7022] tw-mx-auto tw-bg-white/60 tw-px-6 tw-py-2 tw-rounded-full tw-border tw-border-orange-100 tw-shadow-sm tw-mt-2">
+                    <i data-lucide="info" class="tw-w-6 tw-h-6 tw-flex-shrink-0"></i>
+                    <p class="tw-text-[11px] md:tw-text-sm tw-font-bold tw-leading-tight tw-tracking-tight">2026.10.28（水）－ 29（木）／マリンメッセ福岡 B館</p>
+                </div>
+            </div>
         </div>
-      </a>
-      <a class="featured-card" href="#session-b1">
-        <img src="images/seminar/speakers/kai-satoshi.jpg" alt="甲斐 諭 氏">
-        <div class="featured-card__body">
-          <span class="featured-card__date">10.29 THU / B1</span>
-          <h3>Wagyu Beefの価値はどこから生まれるのか</h3>
-          <p>生産・流通・消費からみた和牛バリューチェーン</p>
-          <strong>甲斐 諭 氏</strong>
-        </div>
-      </a>
-      <a class="featured-card" href="#session-b4">
-        <img src="images/seminar/speakers/izawa-ryota.jpg" alt="井澤 僚太 氏">
-        <div class="featured-card__body">
-          <span class="featured-card__date">10.29 THU / B4</span>
-          <h3>ホテル・旅館の電気代削減</h3>
-          <p>大谷山荘の年間2,000万円削減事例を公開</p>
-          <strong>井澤 僚太 氏</strong>
-        </div>
-      </a>
-    </div>
-  </section>
 
-  <section class="seminar-schedule" aria-labelledby="schedule-title">
-    <div class="wrapper">
-      <div class="section-heading section-heading--schedule">
-        <p>TIME TABLE</p>
-        <h2 id="schedule-title">セミナープログラム</h2>
-        <span>講演カード内に、確定済みの内容と確認予定の項目を明確に分けて掲載しています。</span>
-      </div>
+        <!-- ============================================================
+             3. セミナータイムテーブル
+             専用スタイル: css/page/seminar_timetable.css （.stt 配下にスコープ）
+             専用画像    : images/seminar/timetable/
+             ============================================================ -->
+        <section class="stt" id="seminarTimetable" aria-labelledby="sttTitle">
+            <header class="stt-head">
+                <h2 class="stt-title" id="sttTitle">
+                    <svg class="stt-title-icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="4" y="5" width="16" height="15" rx="2"></rect>
+                        <path d="M8 3v4M16 3v4M4 10h16"></path>
+                    </svg>
+                    セミナー<span class="stt-accent">タイムテーブル</span>
+                </h2>
+            </header>
 
-      <div class="date-tabs" role="tablist" aria-label="開催日を選択">
-        <button class="date-tab is-active" id="tab-1028" type="button" role="tab" aria-selected="true" aria-controls="panel-1028" data-day="1028">
-          <small>DAY 1</small><strong>10月28日</strong><span>水曜日</span>
-        </button>
-        <button class="date-tab" id="tab-1029" type="button" role="tab" aria-selected="false" aria-controls="panel-1029" data-day="1029">
-          <small>DAY 2</small><strong>10月29日</strong><span>木曜日</span>
-        </button>
-      </div>
+            <!-- 日付タブ（JSで生成） -->
+            <nav class="stt-tabs" id="sttDateTabs" aria-label="日付で切り替え"></nav>
 
-      <div class="program-toolbar" aria-label="セミナー絞り込み">
-        <div class="category-filters" role="group" aria-label="カテゴリー">
-          <button type="button" class="filter-pill is-active" data-category="all">すべて</button>
-          <button type="button" class="filter-pill" data-category="food">食・観光</button>
-          <button type="button" class="filter-pill" data-category="dx">DX・AI</button>
-          <button type="button" class="filter-pill" data-category="management">経営</button>
-          <button type="button" class="filter-pill" data-category="special">特別企画</button>
-          <button type="button" class="filter-pill" data-category="other">情報確認中</button>
-        </div>
-        <p class="program-result"><strong id="visibleSessionCount">11</strong>件を表示</p>
-      </div>
+            <!-- カテゴリー絞り込み（JSで生成） -->
+            <section class="stt-toolbar" aria-label="セミナー絞り込み">
+                <div class="stt-chip-list" id="sttCategoryFilters" role="list" aria-label="カテゴリー"></div>
+                <div class="stt-toolbar-actions">
+                    <p class="stt-result-count" id="sttResultCount">全0件をこのページに表示</p>
+                </div>
+            </section>
 
-      <div class="program-view-switch" role="group" aria-label="ステージで切り替え">
-        <button type="button" class="view-button is-active" data-stage-filter="all"><b>全</b><span>すべてのセミナー</span></button>
-        <button type="button" class="view-button" data-stage-filter="a"><b>A</b><span>ステージA</span></button>
-        <button type="button" class="view-button" data-stage-filter="b"><b>B</b><span>ステージB</span></button>
-      </div>
+            <!-- 開催日での絞り込み（JSで生成） -->
+            <nav class="stt-stage-nav" id="sttStageFilters" aria-label="開催日で切り替え"></nav>
 
-      <div class="schedule-panel is-active" id="panel-1028" role="tabpanel" aria-labelledby="tab-1028" data-panel="1028">
-        <h3 class="schedule-panel__date"><small>STAGE A</small><strong>10月28日（水）</strong></h3>
-        <article class="session-card session-card--visual" id="session-a1" data-category="food" data-state="published">
-          <div class="session-card__time"><span>A1</span><strong>10:30</strong><i>–</i><strong>11:00</strong></div>
-          <div class="session-card__main">
-            <div class="session-card__badges"><span>観光 × 食</span></div>
-            <h3>観光資源としての養殖魚<br><small>～観光と食における陸上養殖の可能性～</small></h3>
-            <p class="session-card__description">食が観光資源になることは誰もが認めるところだが、中でも鮮魚の人気は高い。天然魚を想起する方が多いが、養殖魚もここのところ人気を集めている。味はもちろん、通年一定水準の味覚が味わえるという意味では、観光地側から非常に優れた観光アイテムとして重宝されている。講演では、主に九州地域で育てられた養殖魚を紹介し、観光資源としてブランド化した事例を交えながら、今後の起爆剤となりうる食材にも触れる。</p>
-            <div class="speaker-block">
-              <img class="speaker-block__photo" src="images/seminar/speakers/masugu-kazumitsu.jpg" alt="真次 一満 氏">
-              <div><span>九州産業大学 地域共創学部 観光学科 GFBP担当 教授</span><strong>真次 一満 氏</strong></div>
+            <!-- 開催日別の一覧（JSで生成） -->
+            <div class="stt-board" id="sttStageBoard" aria-label="開催日別セミナー一覧"></div>
+
+            <p class="stt-empty" id="sttEmptyState" hidden>条件に合うセミナーが見つかりませんでした。日付・カテゴリーを変更してご確認ください。</p>
+            <p class="stt-note">※プログラムは変更になる場合がございます。</p>
+        </section>
+
+        <!-- B. メインコンテンツ -->
+        <main class="tw-max-w-[1200px] tw-mx-auto tw-p-4 tw-pt-10">
+
+            <!-- 7. CTAセクション -->
+            <div class="tw-mt-20 tw-space-y-10 tw-max-w-[1200px] tw-mx-auto tw-pb-10">
+                <div class="tw-relative tw-group">
+                    <div class="tw-absolute tw-inset-[-4px] tw-bg-gradient-to-r tw-from-orange-400 tw-to-orange-600 tw-rounded-[2.5rem] tw-blur tw-opacity-25 group-hover:tw-opacity-40 tw-transition tw-duration-1000 group-hover:tw-duration-200"></div>
+                    <div class="tw-relative tw-p-10 md:tw-p-14 tw-bg-white tw-rounded-[2.5rem] tw-text-center tw-border tw-border-orange-100 tw-shadow-2xl tw-overflow-hidden">
+                        <div class="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-2 tw-bg-[#EA7022]"></div>
+                        <div class="tw-mb-8">
+                            <div class="tw-inline-flex tw-items-center tw-gap-2 tw-px-5 tw-py-1.5 tw-bg-orange-100 tw-text-[#EA7022] tw-rounded-full tw-text-xs tw-font-black tw-mb-4">
+                                <i data-lucide="alert-circle" class="tw-w-3.5 tw-h-3.5"></i> セミナー受講について
+                            </div>
+                            <p class="tw-text-xl md:tw-text-3xl tw-text-gray-900 tw-leading-tight tw-font-black tw-tracking-tighter tw-mb-4">
+                                セミナー申込をするには<br class="sm:tw-hidden" />来場事前登録が必要です
+                            </p>
+                            <p class="tw-text-sm md:tw-text-base tw-text-gray-500 tw-font-bold tw-max-w-4xl tw-mx-auto">
+                                来場事前登録の完了後、来場者マイページから各セミナーを予約できます。
+                            </p>
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-items-center tw-gap-6">
+                            <a href="https://velsion.jp/kyusyu-2026/visitor/register/terms" target="_blank" rel="noopener" class="tw-w-full sm:tw-w-auto tw-bg-[#184A9A] tw-text-white tw-px-16 tw-py-5 tw-rounded-full tw-font-black tw-text-lg md:tw-text-xl tw-flex tw-items-center tw-justify-center tw-gap-3 tw-shadow-2xl tw-shadow-blue-200 hover:tw-bg-[#123a7a] tw-transition-all hover:tw-translate-y-[-4px] active:tw-scale-95 tw-border-b-4 tw-border-[#0f3672] tw-no-underline">
+                                <i data-lucide="user-check" class="tw-w-6 tw-h-6"></i>
+                                来場事前登録はこちら
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="tw-relative tw-group">
+                    <div class="tw-absolute tw-inset-[-4px] tw-bg-gradient-to-r tw-from-blue-400 tw-to-blue-600 tw-rounded-[2.5rem] tw-blur tw-opacity-20 group-hover:tw-opacity-30 tw-transition tw-duration-1000 group-hover:tw-duration-200"></div>
+                    <div class="tw-relative tw-p-10 md:tw-p-14 tw-bg-white tw-rounded-[2.5rem] tw-text-center tw-border tw-border-blue-100 tw-shadow-2xl tw-overflow-hidden">
+                        <div class="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-2 tw-bg-[#174A9A]"></div>
+                        <div class="tw-mb-8">
+                            <p class="tw-text-xl md:tw-text-3xl tw-text-gray-900 tw-leading-tight tw-font-black tw-tracking-tighter tw-mb-4">
+                                来場事前登録がお済みの方は<br class="sm:tw-hidden" />マイページからお進みください
+                            </p>
+                            <p class="tw-text-sm md:tw-text-base tw-text-gray-500 tw-font-bold">
+                                登録済みの方は、ログインしてすぐにセミナー予約が可能です。
+                            </p>
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-items-center tw-gap-6">
+                            <a href="#" class="tw-w-full sm:tw-w-auto tw-bg-[#174A9A] tw-text-white tw-px-16 tw-py-5 tw-rounded-full tw-font-black tw-text-lg md:tw-text-xl tw-flex tw-items-center tw-justify-center tw-gap-3 tw-shadow-2xl tw-shadow-blue-200 hover:tw-bg-[#0f346e] tw-transition-all hover:tw-translate-y-[-4px] active:tw-scale-95 tw-border-b-4 tw-border-[#0b2857] tw-no-underline">
+                                <i data-lucide="log-in" class="tw-w-6 tw-h-6"></i>
+                                来場者マイページはこちら
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="tw-text-center tw-px-6 tw-text-xs md:tw-text-sm tw-text-gray-400 tw-font-black tw-uppercase tw-tracking-widest">
+                    ※プログラムは変更になる場合がございます。
+                </div>
             </div>
-          </div>
-        </article>
+        </main>
 
-        <article class="session-card" data-category="other" data-state="pending">
-          <div class="session-card__time"><span>A2</span><strong>11:20</strong><i>–</i><strong>12:20</strong></div>
-          <div class="session-card__main">
 
-            <h3>講演内容調整中</h3>
-            <p class="session-card__description">詳細は決まり次第お知らせします。</p>
+    <script>
+        // ============================================================
+        //  セミナーデータ（正データ: ksh-seminar-coder-handoff）
+        //  ここを編集すれば表示内容を差し替えられます
+        // ============================================================
+        const dates = ['10/28', '10/29'];
+        const dayLabels = { '10/28': '水', '10/29': '木' };
 
-          </div>
-        </article>
+        // 開催日グループ（会場は1か所、日付で分かれているだけ）
+        // id は内部キー（CSSクラス .stt-stage-a / -b と seminars[].stage に対応）
+        const sttStages = [
+            {
+                id: 'a',
+                date: '10/28',
+                label: '10月28日（水）',
+                shortLabel: 'DAY 1',
+                icon: '1',
+                desc: '食・文化を生かす地域価値、宿泊DX、生成AI、写真活用まで。初日は現場をすぐ動かす知見が集まります。'
+            },
+            {
+                id: 'b',
+                date: '10/29',
+                label: '10月29日（木）',
+                shortLabel: 'DAY 2',
+                icon: '2',
+                desc: '和牛バリューチェーン、IR戦略、省人化、エネルギーコスト、デジタル集客。経営に直結するテーマを扱います。'
+            }
+        ];
 
-        <article class="session-card session-card--visual" id="session-a3" data-category="dx" data-state="published">
-          <div class="session-card__time"><span>A3</span><strong>12:40</strong><i>–</i><strong>13:25</strong></div>
-          <div class="session-card__main">
-            <div class="session-card__badges"><span>宿泊DX</span><span>生成AI</span></div>
-            <h3>生成AIがホテルPMSをどう変えるか<br><small>ー“AI接客”が現実になる時代へー</small></h3>
-            <p class="session-card__description">生成AIが注目される中で、「AIで業務効率化を」と取り組む企業は増えています。しかし、実際に利益や運営効率に直結する活用事例はまだ多くありません。本セミナーでは、ホテル運営の中核であるPMSに焦点を当て、生成AIをPMSに組み込むことでどのようにフロント業務を変えられるのか、具体的なデモを交えて現場視点で解説します。</p>
-            <div class="speaker-block">
-              <div class="speaker-block__logo"><img src="images/seminar/logos/airhost.png" alt="AirHost"></div>
-              <div><span>エアホスト／テクニカルセールス</span><strong>石本 華奈子 氏</strong></div>
-            </div>
-          </div>
-        </article>
+        // カテゴリー（絞り込み）
+        const categories = [
+            { key: 'all', label: 'すべて' },
+            { key: 'food', label: '食・観光' },
+            { key: 'dx', label: 'DX・AI' },
+            { key: 'management', label: '経営' },
+            { key: 'special', label: '特別企画' },
+            { key: 'other', label: '情報確認中' }
+        ];
 
-        <article class="session-card" id="session-a4" data-category="other" data-state="pending">
-          <div class="session-card__time"><span>A4</span><strong>13:45</strong><i>–</i><strong>14:30</strong></div>
-          <div class="session-card__main">
+        const categoryLabel = (key) => (categories.find((c) => c.key === key) || {}).label || '';
 
-            <h3>講演内容調整中</h3>
-            <p class="session-card__description">詳細は決まり次第お知らせします。</p>
+        // 講演一覧（ここに追記すればFV・バナー・各件数表示は自動で更新されます）
+        const seminars = [
+            // ── 10月28日（水） ──
+            {
+                id: 'a1', stage: 'a', date: '10/28',
+                startTime: '10:30', endTime: '11:00',
+                category: 'food', badges: ['観光 × 食'],
+                title: '観光資源としての養殖魚',
+                subtitle: '～観光と食における陸上養殖の可能性～',
+                description: '食が観光資源になることは誰もが認めるところだが、中でも鮮魚の人気は高い。天然魚を想起する方が多いが、養殖魚もここのところ人気を集めている。味はもちろん、通年一定水準の味覚が味わえるという意味では、観光地側から非常に優れた観光アイテムとして重宝されている。講演では、主に九州地域で育てられた養殖魚を紹介し、観光資源としてブランド化した事例を交えながら、今後の起爆剤となりうる食材にも触れる。',
+                speakers: [{
+                    name: '真次 一満 氏',
+                    role: '九州産業大学 地域共創学部 観光学科 GFBP担当 教授',
+                    photo: './images/seminar/speakers/masugu-kazumitsu.jpg'
+                }],
+                featured: true
+            },
+            {
+                id: 'a2', stage: 'a', date: '10/28',
+                startTime: '11:20', endTime: '12:20',
+                category: 'food', badges: ['地域価値', 'ストーリー経営'],
+                title: '「歴史と文化」を宿の強みに変える方法',
+                subtitle: '～地域価値を高めるストーリー経営とは～（仮）',
+                speakers: [
+                    {
+                        name: '桑野 和泉 氏',
+                        role: '一般社団法人日本旅館協会 会長／由布院 玉の湯',
+                        photo: './images/seminar/speakers/kuwano-izumi.jpg'
+                    },
+                    {
+                        name: '立花 千月香 氏',
+                        role: '株式会社御花／柳川藩主立花邸 御花',
+                        photo: './images/seminar/speakers/tachibana.jpg'
+                    }
+                ]
+            },
+            {
+                id: 'a3', stage: 'a', date: '10/28',
+                startTime: '12:40', endTime: '13:25',
+                category: 'dx', badges: ['宿泊DX', '生成AI'],
+                title: '生成AIがホテルPMSをどう変えるか',
+                subtitle: 'ー“AI接客”が現実になる時代へー',
+                description: '生成AIが注目される中で、「AIで業務効率化を」と取り組む企業は増えています。しかし、実際に利益や運営効率に直結する活用事例はまだ多くありません。本セミナーでは、ホテル運営の中核であるPMSに焦点を当て、生成AIをPMSに組み込むことでどのようにフロント業務を変えられるのか、具体的なデモを交えて現場視点で解説します。',
+                speakers: [{
+                    name: '石本 華奈子 氏',
+                    role: 'エアホスト／テクニカルセールス',
+                    logo: './images/seminar/logos/airhost.png',
+                    logoAlt: 'AirHost'
+                }]
+            },
+            {
+                id: 'a4', stage: 'a', date: '10/28',
+                startTime: '13:45', endTime: '14:30',
+                category: 'management', badges: ['集客', '写真活用'],
+                title: '【予約率・口コミが劇的に変わる】写真からはじめる宿泊施設のビジュアルマーケティング＆レピュテーションマネジメント',
+                speakers: [{
+                    name: '畔柳 信吾 氏',
+                    role: '株式会社Tikaras／執行役員'
+                }]
+            },
+            {
+                id: 'a5', stage: 'a', date: '10/28',
+                startTime: '14:50', endTime: '16:50',
+                category: 'special', badges: ['SPECIAL PROGRAM'],
+                title: 'ネクストリーダーズ',
+                speakers: [],
+                special: true
+            },
 
-          </div>
-        </article>
+            // ── 10月29日（木） ──
+            {
+                id: 'b1', stage: 'b', date: '10/29',
+                startTime: '10:30', endTime: '11:00',
+                category: 'food', badges: ['和牛', 'バリューチェーン'],
+                title: 'Wagyu Beefの価値はどこから生まれるのか',
+                subtitle: '～生産・流通・消費からみた和牛バリューチェーン～',
+                speakers: [{
+                    name: '甲斐 諭 氏',
+                    role: '学校法人中村学園 顧問（中村学園大学 前学長、九州大学 名誉教授）',
+                    photo: './images/seminar/speakers/kai-satoshi.jpg'
+                }],
+                featured: true
+            },
+            {
+                id: 'b2', stage: 'b', date: '10/29',
+                startTime: '11:20', endTime: '12:20',
+                category: 'management', badges: ['IR', '観光戦略'],
+                title: '2030年大阪IR開業',
+                subtitle: '九州・沖縄の宿泊業が今から仕掛けるべき戦略（仮）',
+                speakers: [{
+                    name: '蔭山 秀一 氏',
+                    role: '一般社団法人日本ホテル協会 会長／株式会社ロイヤルホテル 取締役会長',
+                    photo: './images/seminar/speakers/kageyama-shuichi.jpg'
+                }]
+            },
+            {
+                id: 'b3', stage: 'b', date: '10/29',
+                startTime: '12:40', endTime: '13:25',
+                category: 'dx', badges: ['省人化', 'スマートロック'],
+                title: 'スマホ×スマートロックで省人化と新体験',
+                description: '宿泊業界におけるフロント業務の非対面化とゲストの利便性向上は急務です。本講演では、スマホの「Apple／Googleウォレット」等を活用し、チェックインから客室解錠までをキーレスで完結させる最新のスマートオペレーションを解説します。予約と連動した暗証番号やQRコードの自動発行により、鍵の受け渡し業務を削減し、スマートな宿泊体験を創出。空いた時間を「おもてなし」へ注力するヒントを、多様な導入事例とともにご紹介します。',
+                speakers: [{
+                    name: '加藤 航 氏',
+                    role: 'リモートロックジャパン／西日本・市場開拓室 セールス担当',
+                    logo: './images/seminar/logos/remotelock.png',
+                    logoAlt: 'RemoteLOCK'
+                }]
+            },
+            {
+                id: 'b4', stage: 'b', date: '10/29',
+                startTime: '14:10', endTime: '', endPending: '終了時刻調整中',
+                category: 'management', badges: ['経営', '電気代削減'],
+                title: 'ホテル・旅館の電気代削減',
+                subtitle: '大谷山荘の年間2,000万円削減事例を公開',
+                description: '電力価格の高止まりが続くなか、「電気代は仕方ない固定費」と諦めていませんか？ 24時間稼働の空調、照明、厨房設備に加え、温浴施設を抱える宿泊業にとって、電気代は営業利益に直結する大きな固定費です。山口県長門市の老舗旅館「大谷山荘」は、デジタルグリッドプラットフォームを導入し、わずか1年で約2,000万円のコスト削減を実現しました。本セミナーでは、その実例をもとに、設備投資を伴わずに電気代を見直す方法を電力のプロが分かりやすくご紹介します。',
+                speakers: [{
+                    name: '井澤 僚太 氏',
+                    role: 'デジタルグリッド プラットフォーム事業部 Director（DG Life合同会社 CEO）',
+                    photo: './images/seminar/speakers/izawa-ryota.jpg',
+                    logo: './images/seminar/logos/digitalgrid.png',
+                    logoAlt: 'DIGITAL GRID'
+                }],
+                featured: true
+            },
+            {
+                id: 'b5', stage: 'b', date: '10/29',
+                startTime: '14:50', endTime: '15:35',
+                category: 'dx', badges: ['集客', 'AI・SNS', 'インバウンド'],
+                title: '宿泊業界のデジタル戦略2026–2027',
+                subtitle: '～2026年秋冬戦略と、2027年を見据えたAI・SNS・インバウンド最新動向～',
+                description: '2026年、インバウンド市場は「回復」から「構造変化」の時代へ。さらにAI検索の普及により、宿泊施設の集客は大きな転換期を迎えています。本セミナーでは、2026年秋冬に成果を出すための重点施策を中心に、最新のインバウンド市場分析、AI検索への対応、SNS・ショート動画活用、成功事例をご紹介するとともに、2027年を見据えて今から準備すべきデジタル戦略までを実践的に解説します。',
+                speakers: [{
+                    name: '水野 真寿 氏',
+                    role: '株式会社アビリブ／代表取締役副社長'
+                }]
+            },
+            {
+                id: 'b6', stage: 'b', date: '10/29',
+                startTime: '15:55', endTime: '16:40',
+                category: 'other', badges: [],
+                title: '講演内容調整中',
+                description: '詳細は決まり次第お知らせします。',
+                speakers: [],
+                pending: true
+            }
+        ];
 
-        <article class="session-card session-card--special" id="session-a5" data-category="special" data-state="pending">
-          <div class="session-card__time"><span>A5</span><strong>14:50</strong><i>–</i><strong>16:50</strong></div>
-          <div class="session-card__main">
-            <div class="session-card__badges"><span>SPECIAL PROGRAM</span></div>
-            <h3>ネクストリーダーズ</h3>
+        // タイムテーブル専用のノーイメージ画像
+        const sttNoImage = './images/seminar/timetable/noimage.svg';
 
-          </div>
-        </article>
-      </div>
+        // --- State ---
+        // activeStage: 'all' | 'a' | 'b'
+        let activeStage = 'all';
+        let selectedCategory = 'all';
 
-      <div class="schedule-panel" id="panel-1029" role="tabpanel" aria-labelledby="tab-1029" data-panel="1029" hidden>
-        <h3 class="schedule-panel__date"><small>STAGE B</small><strong>10月29日（木）</strong></h3>
-        <article class="session-card session-card--visual" id="session-b1" data-category="food" data-state="pending">
-          <div class="session-card__time"><span>B1</span><strong>10:30</strong><i>–</i><strong>11:00</strong></div>
-          <div class="session-card__main">
-            <div class="session-card__badges"><span>和牛</span><span>バリューチェーン</span></div>
-            <h3>Wagyu Beefの価値はどこから生まれるのか<br><small>～生産・流通・消費からみた和牛バリューチェーン～</small></h3>
+        // --- Utils ---
+        const sttEsc = (v) => String(v == null ? '' : v)
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
-            <div class="speaker-block">
-              <img class="speaker-block__photo" src="images/seminar/speakers/kai-satoshi.jpg" alt="甲斐 諭 氏">
-              <div><span>学校法人中村学園 顧問（中村学園大学 前学長、九州大学 名誉教授）</span><strong>甲斐 諭 氏</strong></div>
-            </div>
-          </div>
-        </article>
+        const sttToMinutes = (time) => {
+            const [h, m] = String(time || '0:0').split(':').map(Number);
+            return (h || 0) * 60 + (m || 0);
+        };
 
-        <article class="session-card" data-category="other" data-state="pending">
-          <div class="session-card__time"><span>B2</span><strong>11:20</strong><i>–</i><strong>12:20</strong></div>
-          <div class="session-card__main">
+        const sttDateLabel = (d) => `${d}（${dayLabels[d] || ''}）`;
 
-            <h3>講演内容調整中</h3>
-            <p class="session-card__description">詳細は決まり次第お知らせします。</p>
+        const sttStageById = (id) => sttStages.find((stage) => stage.id === id) || null;
 
-          </div>
-        </article>
+        const sttStageOfDate = (date) => sttStages.find((stage) => stage.date === date) || null;
 
-        <article class="session-card session-card--visual" id="session-b3" data-category="dx" data-state="published">
-          <div class="session-card__time"><span>B3</span><strong>12:40</strong><i>–</i><strong>13:25</strong></div>
-          <div class="session-card__main">
-            <div class="session-card__badges"><span>省人化</span><span>スマートロック</span></div>
-            <h3>スマホ×スマートロックで省人化と新体験</h3>
-            <p class="session-card__description">宿泊業界におけるフロント業務の非対面化とゲストの利便性向上は急務です。本講演では、スマホの「Apple／Googleウォレット」等を活用し、チェックインから客室解錠までをキーレスで完結させる最新のスマートオペレーションを解説します。予約と連動した暗証番号やQRコードの自動発行により、鍵の受け渡し業務を削減し、スマートな宿泊体験を創出。空いた時間を「おもてなし」へ注力するヒントを、多様な導入事例とともにご紹介します。</p>
-            <div class="speaker-block">
-              <div class="speaker-block__logo"><img src="images/seminar/logos/remotelock.png" alt="RemoteLOCK"></div>
-              <div><span>リモートロックジャパン／西日本・市場開拓室 セールス担当</span><strong>加藤 航 氏</strong></div>
-            </div>
-          </div>
-        </article>
+        // 講演コードを日付ベースで自動採番（例：10/28 の1件目 → 28-1）
+        // 開始時刻順に振り直すので、データを追加・削除しても番号が自動で整います。
+        function sttAssignCodes() {
+            sttStages.forEach((stage) => {
+                seminars
+                    .filter((s) => s.stage === stage.id)
+                    .sort((a, b) => sttToMinutes(a.startTime) - sttToMinutes(b.startTime))
+                    .forEach((s, i) => {
+                        const day = String(s.date).split('/')[1] || s.date;
+                        s.code = `${day}-${i + 1}`;
+                    });
+            });
+        }
 
-        <article class="session-card session-card--visual" id="session-b4" data-category="management" data-state="published">
-          <div class="session-card__time"><span>B4</span><strong>14:10</strong><i>–</i><b class="pending">終了時刻調整中</b></div>
-          <div class="session-card__main">
-            <div class="session-card__badges"><span>経営</span><span>電気代削減</span></div>
-            <h3>ホテル・旅館の電気代削減<br><small>大谷山荘の年間2,000万円削減事例を公開</small></h3>
-            <p class="session-card__description">電力価格の高止まりが続くなか、「電気代は仕方ない固定費」と諦めていませんか？ 24時間稼働の空調、照明、厨房設備に加え、温浴施設を抱える宿泊業にとって、電気代は営業利益に直結する大きな固定費です。山口県長門市の老舗旅館「大谷山荘」は、デジタルグリッドプラットフォームを導入し、わずか1年で約2,000万円のコスト削減を実現しました。本セミナーでは、その実例をもとに、設備投資を伴わずに電気代を見直す方法を電力のプロが分かりやすくご紹介します。</p>
-            <div class="speaker-block">
-              <img class="speaker-block__photo" src="images/seminar/speakers/izawa-ryota.jpg" alt="井澤 僚太 氏">
-              <div class="speaker-block__with-logo"><img src="images/seminar/logos/digitalgrid.png" alt="DIGITAL GRID"><span>デジタルグリッド プラットフォーム事業部 Director（DG Life合同会社 CEO）</span><strong>井澤 僚太 氏</strong></div>
-            </div>
-          </div>
-        </article>
+        // --- 絞り込み ---
+        function sttMatchCategory(s) {
+            return selectedCategory === 'all' || s.category === selectedCategory;
+        }
 
-        <article class="session-card" id="session-b5" data-category="dx" data-state="published">
-          <div class="session-card__time"><span>B5</span><strong>14:50</strong><i>–</i><strong>15:35</strong></div>
-          <div class="session-card__main">
-            <div class="session-card__badges"><span>集客</span><span>AI・SNS</span><span>インバウンド</span></div>
-            <h3>宿泊業界のデジタル戦略2026–2027<br><small>～2026年秋冬戦略と、2027年を見据えたAI・SNS・インバウンド最新動向～</small></h3>
-            <p class="session-card__description">2026年、インバウンド市場は「回復」から「構造変化」の時代へ。さらにAI検索の普及により、宿泊施設の集客は大きな転換期を迎えています。本セミナーでは、2026年秋冬に成果を出すための重点施策を中心に、最新のインバウンド市場分析、AI検索への対応、SNS・ショート動画活用、成功事例をご紹介するとともに、2027年を見据えて今から準備すべきデジタル戦略までを実践的に解説します。</p>
+        function sttVisibleStages() {
+            return activeStage === 'all' ? sttStages : sttStages.filter((st) => st.id === activeStage);
+        }
 
-            <div class="speaker-block speaker-block--text"><div><span>株式会社アビリブ／代表取締役副社長</span><strong>水野 真寿 氏</strong></div></div>
-          </div>
-        </article>
+        function sttSessionsOf(stageId) {
+            return seminars
+                .filter((s) => s.stage === stageId)
+                .filter(sttMatchCategory)
+                .sort((a, b) => sttToMinutes(a.startTime) - sttToMinutes(b.startTime));
+        }
 
-        <article class="session-card" data-category="other" data-state="pending">
-          <div class="session-card__time"><strong>15:55</strong><i>–</i><strong>16:40</strong></div>
-          <div class="session-card__main">
+        function sttVisibleCount() {
+            return sttVisibleStages().reduce((sum, st) => sum + sttSessionsOf(st.id).length, 0);
+        }
 
-            <h3>講演内容調整中</h3>
-            <p class="session-card__description">詳細は決まり次第お知らせします。</p>
+        // --- 注目セミナーカルーセル ---
+        function scrollCarousel(direction) {
+            const container = document.getElementById('carouselContainer');
+            if (!container) return;
+            container.scrollBy({
+                left: direction === 'left' ? -300 : 300,
+                behavior: 'smooth'
+            });
+        }
 
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+        function renderCarousel() {
+            const container = document.getElementById('carouselContainer');
+            if (!container) return;
+            container.innerHTML = seminars.filter((s) => s.featured).map((s) => {
+                const sp = s.speakers[0] || {};
+                const thumb = sp.photo || sp.logo || sttNoImage;
+                return `
+                <div onclick="sttFocusSeminar('${s.stage}', '${s.id}')" class="carousel_card tw-flex-shrink-0 tw-w-[300px] md:tw-w-[360px] tw-bg-white tw-border tw-border-gray-100 tw-rounded-3xl tw-shadow-xl tw-shadow-gray-200/40 tw-overflow-hidden tw-snap-start tw-group/card tw-cursor-pointer tw-transition-all tw-duration-300">
+                    <div class="tw-h-60 tw-overflow-hidden tw-relative tw-bg-gray-50">
+                        <img src="${thumb}" alt="${sttEsc(sp.name || s.title)}" class="tw-w-full tw-h-full tw-object-cover group-hover/card:tw-scale-110 tw-transition-transform tw-duration-700" onerror="this.src='${sttNoImage}'">
+                        <div class="tw-absolute tw-inset-0 tw-bg-gradient-to-t tw-from-black/60 tw-to-transparent tw-opacity-60"></div>
+                        <div class="tw-absolute tw-top-4 tw-left-4 tw-flex tw-flex-col tw-gap-1.5 tw-items-start">
+                            <span class="tw-bg-[#EA7022] tw-text-white tw-text-[12px] tw-font-black tw-px-3 tw-py-1 tw-rounded-full tw-shadow-lg">${sttDateLabel(s.date)}</span>
+                            ${s.code ? `<span class="tw-bg-white/95 tw-text-[#174A9A] tw-text-[14px] tw-font-black tw-px-3 tw-py-1 tw-rounded-full tw-shadow-lg tw-flex tw-items-center tw-gap-1 tw-backdrop-blur-md">
+                                <i data-lucide="hash" class="tw-w-[14px] tw-h-[14px]"></i> ${sttEsc(s.code)}
+                            </span>` : ''}
+                        </div>
+                    </div>
+                    <div class="tw-p-5">
+                        <div class="tw-flex tw-items-center tw-gap-2 tw-mb-3">
+                            <span class="tw-px-2.5 tw-py-1 tw-text-[12px] tw-font-black tw-rounded tw-bg-[#174A9A] tw-text-white">${sttEsc(categoryLabel(s.category))}</span>
+                            <span class="tw-text-[12px] tw-px-2.5 tw-py-1 tw-rounded-full tw-border tw-border-gray-100 tw-bg-gray-50 tw-text-gray-500 tw-font-bold">${sttEsc(s.startTime)} START</span>
+                        </div>
+                        <h3 class="tw-text-base md:tw-text-lg tw-font-black tw-text-gray-900 tw-leading-tight tw-line-clamp-2 tw-min-h-[2.8em] tw-mb-4 group-hover/card:tw-text-[#EA7022] tw-transition-colors">${sttEsc(s.title)}</h3>
+                        <div class="tw-flex tw-items-center tw-gap-3 tw-pt-4 tw-border-t tw-border-gray-50">
+                            <div class="cal_icon tw-w-10 tw-h-10 tw-rounded-full tw-bg-gray-100 tw-flex tw-items-center tw-justify-center tw-text-gray-400 tw-border"><i data-lucide="user" class="tw-w-6 tw-h-6"></i></div>
+                            <div class="tw-flex-1 tw-min-w-0 tw-text-left">
+                                <p class="tw-text-[14px] tw-font-black tw-text-gray-800 tw-truncate">${sttEsc(sp.name || '')}</p>
+                                <p class="tw-text-[11px] tw-text-gray-400 tw-truncate">${sttEsc(sp.role || '')}</p>
+                            </div>
+                            <i data-lucide="chevron-right" class="tw-w-6 tw-h-6 tw-text-gray-300 group-hover/card:tw-translate-x-1 tw-transition-transform"></i>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
 
-  <section class="seminar-register wrapper" aria-labelledby="register-title">
-    <div>
-      <p>SEMINAR REGISTRATION</p>
-      <h2 id="register-title">セミナー受講には来場事前登録が必要です</h2>
-      <span>申込開始後、来場者マイページから各セミナーを予約できます。</span>
-    </div>
-    <div class="seminar-register__action" aria-disabled="true">
-      <strong>来場事前登録URL</strong>
-      <span>準備中</span>
-    </div>
-  </section>
+        // --- タイムテーブル ---
+        function sttRenderDateTabs() {
+            document.getElementById('sttDateTabs').innerHTML = dates.map((date) => {
+                const stage = sttStageOfDate(date);
+                const isActive = !!stage && activeStage === stage.id;
+                const isIncluded = !isActive && activeStage === 'all';
+                return `
+                <button type="button" class="stt-tab ${isActive ? 'is-active' : ''}${isIncluded ? ' is-included' : ''}" role="tab" aria-selected="${isActive}" onclick="sttSetStage('${stage ? stage.id : 'all'}')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                        <rect x="4" y="5" width="16" height="15" rx="2"></rect>
+                        <path d="M8 3v4M16 3v4M4 10h16"></path>
+                    </svg>
+                    ${sttDateLabel(date)}
+                </button>`;
+            }).join('');
+        }
+
+        function sttRenderCategoryFilters() {
+            document.getElementById('sttCategoryFilters').innerHTML = categories.map((c) => `
+                <button type="button" class="stt-chip ${selectedCategory === c.key ? 'is-active' : ''}" data-category="${c.key}" onclick="sttSetCategory('${c.key}')">${sttEsc(c.label)}</button>
+            `).join('');
+        }
+
+        function sttRenderStageFilters() {
+            const items = [{
+                id: 'all',
+                icon: '全',
+                label: 'すべてのセミナー',
+                count: sttStages.reduce((n, st) => n + sttSessionsOf(st.id).length, 0)
+            }].concat(sttStages.map((stage) => ({
+                id: stage.id,
+                icon: stage.icon,
+                label: stage.label,
+                count: sttSessionsOf(stage.id).length
+            })));
+
+            document.getElementById('sttStageFilters').innerHTML = items.map((item) => `
+                <button type="button" class="stt-stage-filter ${activeStage === item.id ? 'is-active' : ''}" data-stage="${item.id}" onclick="sttSetStage('${item.id}')">
+                    <span class="stt-stage-filter-icon">${item.icon}</span>
+                    <span class="stt-stage-filter-main">
+                        <span class="stt-stage-filter-title">${sttEsc(item.label)}</span>
+                        <span class="stt-stage-filter-count">${item.count}件</span>
+                    </span>
+                </button>
+            `).join('');
+        }
+
+        function sttPhotoHtml(s) {
+            const shots = [];
+            s.speakers.forEach((sp) => {
+                if (sp.photo) {
+                    shots.push(`<div class="stt-photo"><img src="${sp.photo}" alt="${sttEsc(sp.name)}" onerror="this.src='${sttNoImage}'"></div>`);
+                }
+                if (sp.logo) {
+                    shots.push(`<div class="stt-photo is-logo"><img src="${sp.logo}" alt="${sttEsc(sp.logoAlt || sp.name)}"></div>`);
+                }
+            });
+            if (!shots.length) return { html: '', hasPhoto: false };
+
+            const inner = shots.length > 1
+                ? `<div class="stt-photo double">${shots.join('')}</div>`
+                : shots[0];
+            return { html: `<div class="stt-photo-wrap">${inner}</div>`, hasPhoto: true };
+        }
+
+        function sttCreateCard(s) {
+            const photo = sttPhotoHtml(s);
+            const classes = ['stt-card'];
+            if (!photo.hasPhoto) classes.push('no-photo');
+            if (s.pending) classes.push('is-pending');
+            if (s.special) classes.push('is-special');
+
+            // カテゴリー名と重複するバッジは表示しない
+            const catLabel = categoryLabel(s.category);
+            const badges = (s.badges || [])
+                .filter((b) => b !== catLabel)
+                .map((b) => `<span class="stt-mini-tag">${sttEsc(b)}</span>`).join('');
+
+            const speakerHtml = s.speakers.map((sp) => `
+                <p class="stt-speaker-info">${sttEsc(sp.name)}${sp.role ? `<br><span class="stt-role">${sttEsc(sp.role)}</span>` : ''}</p>
+            `).join('');
+
+            const endHtml = s.endPending
+                ? `<span class="stt-time-pending">${sttEsc(s.endPending)}</span>`
+                : `<span>${sttEsc(s.endTime)}</span>`;
+
+            return `
+                <article class="${classes.join(' ')}" id="stt-card-${s.id}">
+                    <div class="stt-time-badge">
+                        ${s.code ? `<span class="stt-time-code">${sttEsc(s.code)}</span>` : ''}
+                        <span>${sttEsc(s.startTime)}</span>
+                        <span class="stt-marker">▼</span>
+                        ${endHtml}
+                    </div>
+                    ${photo.html}
+                    <div class="stt-card-main">
+                        <div class="stt-meta-line">
+                            ${s.category && s.category !== 'other' ? `<span class="stt-tag">${sttEsc(categoryLabel(s.category))}</span>` : ''}
+                            ${badges}
+                            ${s.pending ? '<span class="stt-status is-pending">調整中</span>' : ''}
+                        </div>
+                        <h3 class="stt-card-title">${sttEsc(s.title)}${s.subtitle ? `<span class="stt-card-subtitle">${sttEsc(s.subtitle)}</span>` : ''}</h3>
+                        ${s.description ? `<p class="stt-card-desc">${sttEsc(s.description)}</p>` : ''}
+                        ${speakerHtml}
+                    </div>
+                </article>`;
+        }
+
+        function render() {
+            sttRenderDateTabs();
+            sttRenderCategoryFilters();
+            sttRenderStageFilters();
+
+            const board = document.getElementById('sttStageBoard');
+            const shown = sttVisibleStages();
+
+            board.innerHTML = shown.map((stage) => {
+                const list = sttSessionsOf(stage.id);
+                if (!list.length) return '';
+                return `
+                <section class="stt-column stt-stage-${stage.id}${shown.length === 1 ? ' is-focused' : ''}" aria-label="${sttEsc(stage.label)}">
+                    <header class="stt-stage-head">
+                        <div>
+                            <span class="stt-stage-kicker">${sttEsc(stage.shortLabel)}</span>
+                            <h3 class="stt-stage-title">${sttEsc(stage.label)}</h3>
+                            <p class="stt-stage-desc">${sttEsc(stage.desc)}</p>
+                        </div>
+                        <span class="stt-stage-count">${list.length}件</span>
+                    </header>
+                    <div class="stt-list">${list.map(sttCreateCard).join('')}</div>
+                </section>`;
+            }).join('');
+
+            const count = sttVisibleCount();
+            document.getElementById('sttResultCount').textContent = `${count}件を表示`;
+            document.getElementById('sttEmptyState').hidden = count !== 0;
+
+            // Re-init icons
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function sttSetCategory(key) {
+            selectedCategory = key;
+            render();
+        }
+
+        function sttSetStage(stageId) {
+            activeStage = stageId;
+            render();
+        }
+
+        // 注目セミナーカルーセルから該当カードへジャンプ
+        function sttFocusSeminar(stageId, id) {
+            activeStage = stageId;
+            selectedCategory = 'all';
+            render();
+            requestAnimationFrame(() => {
+                const card = document.getElementById(`stt-card-${id}`);
+                if (!card) return;
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                card.classList.add('is-highlight');
+                setTimeout(() => card.classList.remove('is-highlight'), 2400);
+            });
+        }
+
+        // 横スクロール可能な要素のフェードヒント制御（末端まで来たらフェード解除）
+        function sttApplyScrollFade(el) {
+            if (!el) return;
+            const update = () => {
+                const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+                const fade = 'linear-gradient(to right, #000 80%, transparent 100%)';
+                el.style.webkitMaskImage = atEnd ? 'none' : fade;
+                el.style.maskImage = atEnd ? 'none' : fade;
+            };
+            el.addEventListener('scroll', update, { passive: true });
+            update();
+        }
+
+        // FV・バナーの件数表示をデータから自動反映
+        function sttRenderTotals() {
+            const total = seminars.length;
+            const stageCount = sttStages.length;
+            const set = (id, value) => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = value;
+            };
+            set('sttTotalCount', total);
+            set('sttTotalCount2', total);
+            set('sttStageCount', stageCount);
+        }
+
+        // Init
+        window.addEventListener('load', () => {
+            sttAssignCodes();
+            sttRenderTotals();
+            renderCarousel();
+            render();
+            sttApplyScrollFade(document.getElementById('sttCategoryFilters'));
+            sttApplyScrollFade(document.getElementById('sttStageFilters'));
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+
+
 </div>
 
-
-<section class="ex-about">
+<section class="ex-about" id="about">
 <div class="container">
     <h2 class="page-title">開催概要</h2>
 
@@ -723,6 +1166,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         天神地区・博多駅から、BRT（連節バス）や路線バスでお越しいただけます。
                     </p>
                     <a href="https://www.marinemesse.or.jp/messe-b/access/#bus" class="external-link-icon" target="_blank">BRT・路線バスルートマップ</a><br>
+                    <p class="transport-shuttle-note">
+                        <span class="shuttle-tag">無料</span>JR博多駅から<span class="shuttle-nw">シャトルバス運行予定</span>
+                        <a href="#shuttle-bus" class="shuttle-anchor">詳細▼</a>
+                    </p>
                 </div>
             </div>
 
@@ -742,7 +1189,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.063417254258!2d130.40192737579533!3d33.60368097332905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354191920698809f%3A0xb954298789d04752!2z44Oe44Oq44Oz44Oh44OD44KZ56aP5bKhIELppKg!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
-</div>
+
+    <!-- ↓↓↓ 無料シャトルバス案内 ↓↓↓ -->
+    <div class="shuttle-block" id="shuttle-bus">
+        <h3>無料シャトルバスのご案内</h3>
+
+        <p class="shuttle-lead">
+            <i class="fa-solid fa-bus-simple"></i><span class="shuttle-nw">JR博多駅筑紫口（新幹線口）から</span><span class="shuttle-nw">会場のマリンメッセ福岡B館まで、</span><br class="responsive-br">無料シャトルバスを運行予定です。
+        </p>
+
+        <h4>運行スケジュール</h4>
+        <p class="shuttle-date">運行日：<span class="shuttle-date-nw">2026年10月28日(水)</span>・<span class="shuttle-date-nw">29日(木)</span></p>
+
+        <div class="shuttle-table-wrap">
+            <table class="shuttle-table">
+                <thead>
+                    <tr>
+                        <th scope="col">運行区間</th>
+                        <th scope="col">始発</th>
+                        <th scope="col">終発</th>
+                        <th scope="col">運行間隔</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">JR博多駅 <span class="shuttle-arrow">→</span> マリンメッセ福岡B館</th>
+                        <td data-label="始発">9:00</td>
+                        <td data-label="終発">14:00</td>
+                        <td data-label="運行間隔">30分間隔</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">マリンメッセ福岡B館 <span class="shuttle-arrow">→</span> JR博多駅</th>
+                        <td data-label="始発">13:30</td>
+                        <td data-label="終発">17:00</td>
+                        <td data-label="運行間隔">30分間隔</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>シャトルバス乗降場所</h4>
+        <div class="shuttle-map-grid">
+            <figure class="shuttle-map">
+                <img src="images/index/access/access_map_hakataeki.webp" alt="博多駅のシャトルバス利用者集合場所（オリエンタルホテル 福岡博多ステーション前）を示した地図" loading="lazy" width="467" height="400">
+                <figcaption>
+                    <span class="shuttle-map-place">博多駅 シャトルバス利用者集合場所</span>
+                    <span class="shuttle-map-nw">オリエンタルホテル</span> <span class="shuttle-map-nw">福岡博多ステーション前</span>
+                </figcaption>
+            </figure>
+            <figure class="shuttle-map">
+                <img src="images/index/access/access_map_messe_b.webp" alt="マリンメッセ福岡のシャトルバス利用者集合場所を示した地図" loading="lazy" width="937" height="920">
+                <figcaption>
+                    <span class="shuttle-map-place">マリンメッセ福岡<br class="responsive-br">シャトルバス利用者集合場所</span>
+                </figcaption>
+            </figure>
+        </div>
+
+        <h4>ご利用に際して</h4>
+        <ul class="shuttle-notes">
+            <li>乗車人数に限りがあります。満員の場合は公共交通機関をご利用ください。</li>
+            <li>道路交通事情により運行時刻等が変更になる場合があります。予めご了承ください。</li>
+            <li>バス利用時その他における事故や盗難等に関し、主催事務局は一切責任を負いません。お客様ご自身の判断と責任においてご利用ください。</li>
+        </ul>
+    </div>
+    <!-- ↑↑↑ 無料シャトルバス案内 ↑↑↑ -->
 </div>
 
 
@@ -783,18 +1293,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     
                     <!-- <span class="alert-text">△残りわずか</span> -->
 
-                    <div class="sub-action-area">
-                        <span class="sub-action-label">出展を<br class="sp-only">ご検討の方は：</span>
-                        <a href="./pdf/pamf_ksh_2026.pdf" class="btn btn-dark" target="_blank">
-                            <!-- 書類アイコン -->
-                            <svg class="btn-icon-doc" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z" fill="white"/></svg>
-                            出展資料はこちら
+                                        <div class="booth_btn">
+                        <p class="button-text" style="margin-top: 20px;">＼準備も簡単、費用も安心！／</p>
+                        <a href="exhibitors.php#panel-mini" class="btn-apply wo small" style="margin-top: 5px;">ミニブースプランはこちら</a>
+                    </div>
+
+                    <div class="sub-action-full">
+                        <div class="sub-info-text">すでにお申し込みの出展者さまへ</div>
+                        <a href="https://velsion.jp/kyusyu-2026/exhibitor/mypage/login" class="btn btn-navy" target="_blank">
+                            出展者マイページ
                             <svg class="btn-icon" style="right: 15px;" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg"><path d="M2 0L0.59 1.41L6.17 7L0.59 12.59L2 14L9 7L2 0Z" fill="white"/></svg>
                         </a>
-                    </div>
-                    <div class="booth_btn">
-                        <p class="button-text" style="margin-top: 20px;">＼準備も簡単、費用も安心！／</p>
-                        <a href="https://ksh.jma.or.jp/exhibitors.php#panel-mini" class="btn-apply wo small" style="margin-top: 5px;">ミニブースプランはこちら</a>
+                        <a href="https://velsion.jp/kyusyu-2026/web-guide" class="btn btn-navy" target="_blank" style="margin-top: 10px;">
+                            出展者・出展製品を見る
+                            <svg class="btn-icon" style="right: 15px;" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg"><path d="M2 0L0.59 1.41L6.17 7L0.59 12.59L2 14L9 7L2 0Z" fill="white"/></svg>
+                        </a>
                     </div>
                 </div>
 
@@ -803,17 +1316,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card-catch">予定が決まっていない方も<br class="is-sp">まずはご登録を！</div>
                     <!-- <div class="info-text">来場事前登録は現在準備中です。</div> -->
                     
-                    <a class="btn btn-gray">
-                        来場事前登録はこちら（準備中）
+                    <a href="https://velsion.jp/kyusyu-2026/visitor/register/terms" class="btn btn-orange" target="_blank">
+                        来場事前登録はこちら
                         <svg class="btn-icon" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg"><path d="M2 0L0.59 1.41L6.17 7L0.59 12.59L2 14L9 7L2 0Z" fill="white"/></svg>
                     </a>
 
                     <div class="sub-action-full">
-                        <div class="sub-info-text">来場受付の開始をお知らせいたします</div>
+                        <div class="sub-info-text">最新情報をメールでお届けします</div>
                         <a href="https://pages.jma.or.jp/newmailmagazine_kyusyu_lp.html" class="btn btn-blue" target="_blank">
                             <!-- ベルアイコン -->
                             <svg class="btn-icon-bell" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C13.1 22 14 21.1 14 20H10C10 21.1 10.9 22 12 22ZM18 16V11C18 7.93 16.36 5.36 13.5 4.68V4C13.5 3.17 12.83 2.5 12 2.5C11.17 2.5 10.5 3.17 10.5 4V4.68C7.63 5.36 6 7.92 6 11V16L4 18V19H20V18L18 16Z" fill="white"/></svg>
                             メルマガ登録はこちら
+                            <svg class="btn-icon" style="right: 15px;" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg"><path d="M2 0L0.59 1.41L6.17 7L0.59 12.59L2 14L9 7L2 0Z" fill="white"/></svg>
+                        </a>
+                    </div>
+
+                    <div class="sub-action-full">
+                        <div class="sub-info-text">お取引先などをご招待いただけます</div>
+                        <a href="https://form.run/@dUy974ZcZJpvSpUjrqlk" class="btn btn-outline-blue" target="_blank">
+                            招待状請求フォーム
                             <svg class="btn-icon" style="right: 15px;" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg"><path d="M2 0L0.59 1.41L6.17 7L0.59 12.59L2 14L9 7L2 0Z" fill="white"/></svg>
                         </a>
                     </div>
@@ -862,16 +1383,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="https://ksh.jma.or.jp/index.php">TOP<span class="arrow-icon js-plusIcon"></span></a>
             <ul class="nav-child">
                 <li class="is-sp"><a href="https://ksh.jma.or.jp/index.php">TOPページ</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#buyer-interview">海外ホステッドバイヤーインタビュー</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-about">九州・沖縄 宿泊外食産業展＆アジア食品輸出展とは？</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-reason">九州開催が選ばれる理由</a></li>
                 <li><a href="https://ksh.jma.or.jp/index.php#top-apoint">事前アポイント制商談会</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-exhibitions">九州から世界へ。食のビジネスを広げる2つの展示会</a></li>
+                <li><a href="https://ksh.jma.or.jp/index.php#top-kento">出展・来場をご検討の方へ</a></li>
                 <li><a href="https://ksh.jma.or.jp/index.php#top-past">過去開催の様子</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-venue-movie">会場の雰囲気をご紹介</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#ksh-faq-section">よくある質問</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-kento">出展・ご来場をご検討の方へ</a></li>
-                <li><a href="https://ksh.jma.or.jp/index.php#top-news">お知らせ</a></li>
             </ul>
         </li>
         <li class="nav__item has-child">
@@ -880,7 +1394,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="https://ksh.jma.or.jp/exhibit_foodservice.php">第8回 九州・沖縄 宿泊外食産業展</a></li>
                 <li><a href="https://ksh.jma.or.jp/exhibit_asia.php">第2回 アジア食品輸出展</a></li>
                 <li><a href="https://ksh.jma.or.jp/index.php#ksh-faq-section">よくあるご質問（FAQ）</a></li>
-                <li class="is-pc"><a href="https://ksh.jma.or.jp/index.php#access" target="_blank">アクセス</a></li>
+                <li class="is-pc"><a href="https://ksh.jma.or.jp/index.php#access">アクセス</a></li>
                 <!-- <li><a href="">この展示会とは</a></li>
                 <li><a href="">主催・協賛・運営組織について</a></li>
                 <li><a href="">前回開催報告</a></li>
@@ -899,6 +1413,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="">出展料金・ブースについて</a></li>
                 <li><a href="">出展オプション</a></li> -->
                 <li><a href="https://julaty.com/sightseeing-kyusyu2026-apply/ja/exhibition_application?_gl=1*tc[…]oMA..&_ga=2.19930808.1832336698.1764028487-868031182.1760927779" target="_blank">出展申し込み／各種規定について</a></li>
+                <li><a href="https://velsion.jp/kyusyu-2026/exhibitor/mypage/login" target="_blank">出展者マイページ</a></li>
+                <li><a href="https://velsion.jp/kyusyu-2026/web-guide" target="_blank">出展者・出展製品Webガイド</a></li>
                 <!-- <li><a href="">出展資料ダウンロード</a></li> -->
 
             </ul>
@@ -919,23 +1435,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li class="nav__item has-child is-pc">
             <a href="https://ksh.jma.or.jp/visit.php">来場をご検討の方へ<span class="arrow-icon js-plusIcon"></span></a>
             <ul class="nav-child">
-                <li><a href="seminar.html">セミナー</a></li>
                 <li><a href="https://ksh.jma.or.jp/visit.php#problem">こんなお悩みに</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#reason">来場する３つの理由</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#audience">来場対象</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#joint">２つの展示会紹介</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#merit">来場するメリット</a></li>
-                <li><a href="https://ksh.jma.or.jp/visit.php#register">来場登録</a></li>
+                <li><a href="https://ksh.jma.or.jp/visit.php#register">来場登録について</a></li>
+                <li><a href="https://ksh.jma.or.jp/seminar.php">セミナー</a></li>
                 <li><a href="https://ksh.jma.or.jp/visit.php#about">開催概要</a></li>
                 <li><a href="https://ksh.jma.or.jp/visit.php#ksh-faq-section">よくある質問</a></li>
             </ul>
         </li>
         <li class="nav__item is-sp">
         <a href="https://ksh.jma.or.jp/visit.php">来場をご検討の方へ</a>
+        </li>
+        <li class="nav__item is-sp">
+        <a href="https://velsion.jp/kyusyu-2026/visitor/register/terms" target="_blank">来場事前登録</a>
+        </li>
+        <li class="nav__item is-sp">
+        <a href="https://form.run/@dUy974ZcZJpvSpUjrqlk" target="_blank">招待状請求フォーム</a>
         </li> 
         <li class="nav__item has-child">
             <a href="javascript:void(0)" tabindex="-1">特別企画<span class="arrow-icon js-plusIcon"></span></a>
             <ul class="nav-child">
+                <li><a href="https://ksh.jma.or.jp/ex_pet_2026.php">ペットツーリズム</a></li>
                 <li><a href="https://nextleaders.jma.or.jp/fukuoka.html" target="_blank">ネクストリーダーズ</a></li>
             </ul>
         </li>
@@ -954,12 +1473,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
     <ul class="nav__list nav__list-sub is-pc footeronly ft_nav_list">
         <li class="nav__item"><a href="https://pages.jma.or.jp/ksh-inquiryform.html" target="_blank">お問い合わせ</a></li>
-        <li class="nav__item"><a href="https://ksh.jma.or.jp/index.php#access" target="_blank">アクセス</a></li>
+        <li class="nav__item"><a href="https://ksh.jma.or.jp/index.php#access">アクセス</a></li>
         <!-- <li class="nav__item"><a href="">プレス・取材申し込み</a></li> -->
     </ul>
     <ul class="nav__list nav__list-spnav">
         <li class="nav__item"><a href="https://pages.jma.or.jp/ksh-inquiryform.html" target="_blank">お問い合わせ</a></li>
-        <!-- <li class="nav__item"><a href="https://ksh.jma.or.jp/index.php#access" target="_blank">アクセス</a></li> -->
+        <li class="nav__item"><a href="https://velsion.jp/kyusyu-2026/exhibitor/mypage/login" target="_blank">出展者マイページ</a></li>
+        <li class="nav__item"><a href="https://pages.jma.or.jp/newmailmagazine_kyusyu_lp.html" target="_blank">メルマガ登録</a></li>
+        <!-- <li class="nav__item"><a href="https://ksh.jma.or.jp/index.php#access">アクセス</a></li> -->
         <!-- <li class="nav__item"><a href="">プレス・取材申し込み</a></li> -->
     </ul>
     <!-- <ul class="nav__list nav__list-sub nav__list-footer">
@@ -1008,7 +1529,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<script src="js/seminar-local.js"></script>
 </body>
 </html>
 </body>
